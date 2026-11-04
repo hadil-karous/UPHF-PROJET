@@ -1,0 +1,25 @@
+{
+  "server": "0.9.16",
+  "map": "uphf_gyrovia/Maps/uphf_gyrovia/uphf_gyrovia",
+  "v2x": "unavailable",
+  "rsu": "camera observation only, no V2X RSU",
+  "initial_position": [
+    73.44999694824219,
+    -47.055419921875,
+    -0.0021553421393036842
+  ],
+  "blueprint": "vehicle.tesla.model3",
+  "displacement_m": 5.792931867183779,
+  "max_speed_m_s": 5.114449821660001,
+  "max_height_deviation_m": 0.004056167555972934,
+  "movement_pass": true,
+  "sensor_callbacks": {
+    "lidar": 25,
+    "gnss": 50,
+    "imu": 50,
+    "rgb": 12
+  },
+  "wall_seconds": 40.51231993200008,
+  "simulation_seconds": 2.450000036507845,
+  "real_time_factor": 0.060475431686464
+}

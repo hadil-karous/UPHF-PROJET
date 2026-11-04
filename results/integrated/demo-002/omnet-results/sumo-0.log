@@ -1,0 +1,19 @@
+***Starting server on port 8813 ***
+  waiting for 2 clients...
+  client connected
+  client connected
+Loading net-file from '/repo/cosimulation/sumo-integration/carla/Co-Simulation/Sumo/examples/uphf_piste/uphf_piste.net.xml' ... done (60ms).
+Loading done.
+Simulation version 1.19.0 started with time: 0.00.
+Simulation ended at time: 4.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 82.11s
+ TraCI-Duration: 81.99s
+ Real time factor: 0.0487169
+ UPS: 0.974338
+Vehicles: 
+ Inserted: 1
+ Running: 1
+ Waiting: 0
+

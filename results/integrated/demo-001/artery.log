@@ -1,0 +1,30 @@
+Diagnostic Gyrovia derivative, not the original highway scenario
+OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
+Version: 5.6.2, build: internal, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /artery/src:  153
+Loading NED files from /artery/extern/veins/src/veins:  43
+Loading NED files from /artery/extern/inet/src:  670
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20261104-18:17:25-185
+Setting up network "artery.envmod.World"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.5e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 24   present: 24   in FES: 6
+** Event #3   t=0.05   Elapsed: 65.6157s (1m 05s)  1% completed  (1% total)
+     Speed:     ev/sec=0.0457208   simsec/sec=0   ev/simsec=0
+     Messages:  created: 24   present: 23   in FES: 4
+
+<!> Error: The simulation wanted to ask a question, set cmdenv-interactive=true to allow it: "Enter parameter 'World.node0.middleware.datetime' (unassigned):" -- in module (artery::VehicleMiddleware) World.node0.middleware (id=94), at t=0.05s, event #3
+Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
+Quitting (on error).
+
+End.
+Segmentation fault (core dumped)

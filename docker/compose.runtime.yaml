@@ -1,0 +1,27 @@
+﻿name: exfmd-runtime
+services:
+  artery:
+    image: sarra13ba/exfmd-artery:1.0
+    container_name: exfmd-artery
+    command: ["sleep", "infinity"]
+    shm_size: 256mb
+    ipc: shareable
+    volumes:
+      - ..:/repo
+    networks: [exfmd]
+  ros:
+    image: sarra13ba/exfmd-ros:1.0
+    container_name: exfmd-ros
+    entrypoint: ["/bin/bash"]
+    command: ["-lc", "source /opt/ros/humble/setup.bash; exec sleep infinity"]
+    network_mode: service:artery
+    ipc: service:artery
+    depends_on: [artery]
+    environment:
+      ROS_DOMAIN_ID: "42"
+      RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+    volumes:
+      - ..:/repo
+networks:
+  exfmd:
+    name: exfmd-runtime

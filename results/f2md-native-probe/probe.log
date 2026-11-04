@@ -1,0 +1,787 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
+Version: 5.6.2, build: internal, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /artery/src:  153
+Loading NED files from /artery/extern/veins/src/veins:  43
+Loading NED files from /artery/extern/inet/src:  670
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20261104-18:30:27-275
+Setting up network "artery.envmod.World"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.1e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 24   present: 24   in FES: 6
+CarlaCaService initialized, shm=/dev/shm/agent_0
+Node mbType=Genuine prob=0.3
+CarlaCaService initialized, shm=/dev/shm/agent_1
+Node mbType=LocalAttacker prob=0.3
+CarlaCaService initialized, shm=/dev/shm/agent_2
+Node mbType=Genuine prob=0.3
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.159476490274
+CarlaCaService: received CAM from another vehicle at 0.159476512824
+CarlaCaService: received CAM from another vehicle at 0.159476535866
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.210276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: received CAM from another vehicle at 0.210484360382
+CarlaCaService: received CAM from another vehicle at 0.210484383725
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.214589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 0.214797434852
+CarlaCaService: received CAM from another vehicle at 0.214797458196
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.234725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.234933197069
+CarlaCaService: received CAM from another vehicle at 0.23493319707
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.259476490354
+CarlaCaService: received CAM from another vehicle at 0.259476512908
+CarlaCaService: received CAM from another vehicle at 0.259476535951
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.310276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.314589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 0.330484023344
+CarlaCaService: received CAM from another vehicle at 0.330484046688
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.334725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.334797023344
+CarlaCaService: received CAM from another vehicle at 0.334797046688
+CarlaCaService: received CAM from another vehicle at 0.354933023345
+CarlaCaService: received CAM from another vehicle at 0.354933023345
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.359476490478
+CarlaCaService: received CAM from another vehicle at 0.359476513038
+CarlaCaService: received CAM from another vehicle at 0.359476536084
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.410276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.414589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.434725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.450484023345
+** Event #512   t=0.450484046707   Elapsed: 2.09454s (0m 02s)  15% completed  (15% total)
+     Speed:     ev/sec=244.923   simsec/sec=0.215076   ev/simsec=1138.78
+     Messages:  created: 486   present: 87   in FES: 15
+CarlaCaService: received CAM from another vehicle at 0.450484046707
+CarlaCaService: received CAM from another vehicle at 0.454797023362
+CarlaCaService: received CAM from another vehicle at 0.454797046707
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.459476490632
+CarlaCaService: received CAM from another vehicle at 0.4594765132
+CarlaCaService: received CAM from another vehicle at 0.459476536264
+CarlaCaService: received CAM from another vehicle at 0.474933023345
+CarlaCaService: received CAM from another vehicle at 0.474933023362
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.510276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.514589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.534725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.559476490787
+CarlaCaService: received CAM from another vehicle at 0.559476513368
+CarlaCaService: received CAM from another vehicle at 0.559476536486
+CarlaCaService: received CAM from another vehicle at 0.570484023353
+CarlaCaService: received CAM from another vehicle at 0.570484046768
+CarlaCaService: received CAM from another vehicle at 0.574797023415
+CarlaCaService: received CAM from another vehicle at 0.574797046768
+CarlaCaService: received CAM from another vehicle at 0.594933023353
+CarlaCaService: received CAM from another vehicle at 0.594933023415
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.610276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.614589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 0.630484023359
+CarlaCaService: received CAM from another vehicle at 0.630484046814
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.634725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.634797023455
+CarlaCaService: received CAM from another vehicle at 0.634797046814
+CarlaCaService: received CAM from another vehicle at 0.654933023368
+CarlaCaService: received CAM from another vehicle at 0.654933023502
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.659476490943
+CarlaCaService: received CAM from another vehicle at 0.659476513546
+CarlaCaService: received CAM from another vehicle at 0.659476536753
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.710276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.714589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.734725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.750484023395
+CarlaCaService: received CAM from another vehicle at 0.750484047016
+CarlaCaService: received CAM from another vehicle at 0.75479702362
+CarlaCaService: received CAM from another vehicle at 0.754797047016
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.759476491102
+CarlaCaService: received CAM from another vehicle at 0.759476513739
+CarlaCaService: received CAM from another vehicle at 0.759476537064
+CarlaCaService: received CAM from another vehicle at 0.774933023395
+CarlaCaService: received CAM from another vehicle at 0.77493302362
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.810276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.814589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.834725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.859476491265
+CarlaCaService: received CAM from another vehicle at 0.859476513947
+CarlaCaService: received CAM from another vehicle at 0.859476537417
+CarlaCaService: received CAM from another vehicle at 0.870484023435
+CarlaCaService: received CAM from another vehicle at 0.870484047198
+CarlaCaService: received CAM from another vehicle at 0.874797023764
+CarlaCaService: received CAM from another vehicle at 0.874797047198
+CarlaCaService: received CAM from another vehicle at 0.894933023435
+CarlaCaService: received CAM from another vehicle at 0.894933023764
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.910276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.914589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 0.930484023461
+CarlaCaService: received CAM from another vehicle at 0.930484047306
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.934725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 0.934797023845
+CarlaCaService: received CAM from another vehicle at 0.934797047306
+CarlaCaService: received CAM from another vehicle at 0.95493302349
+CarlaCaService: received CAM from another vehicle at 0.95493302393
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 0.959476491433
+CarlaCaService: received CAM from another vehicle at 0.959476514176
+CarlaCaService: received CAM from another vehicle at 0.959476537813
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.010276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.014589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.034725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.050484023561
+CarlaCaService: received CAM from another vehicle at 1.050484047676
+CarlaCaService: received CAM from another vehicle at 1.054797024115
+CarlaCaService: received CAM from another vehicle at 1.054797047676
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.05947649161
+CarlaCaService: received CAM from another vehicle at 1.059476514431
+CarlaCaService: received CAM from another vehicle at 1.059476538254
+CarlaCaService: received CAM from another vehicle at 1.074933023561
+CarlaCaService: received CAM from another vehicle at 1.074933024115
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.110276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.114589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.134725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.159476491794
+CarlaCaService: received CAM from another vehicle at 1.159476514709
+CarlaCaService: received CAM from another vehicle at 1.15947653873
+CarlaCaService: received CAM from another vehicle at 1.170484023649
+CarlaCaService: received CAM from another vehicle at 1.170484047962
+CarlaCaService: received CAM from another vehicle at 1.174797024312
+CarlaCaService: received CAM from another vehicle at 1.174797047962
+CarlaCaService: received CAM from another vehicle at 1.194933023649
+CarlaCaService: received CAM from another vehicle at 1.194933024312
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.210276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.214589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 1.230484023696
+CarlaCaService: received CAM from another vehicle at 1.230484048108
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.234725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.234797024412
+CarlaCaService: received CAM from another vehicle at 1.234797048108
+CarlaCaService: received CAM from another vehicle at 1.254933023748
+CarlaCaService: received CAM from another vehicle at 1.254933024511
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.259476491991
+CarlaCaService: received CAM from another vehicle at 1.259476515011
+CarlaCaService: received CAM from another vehicle at 1.259476539237
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.310276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.314589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.334725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.350484023859
+CarlaCaService: received CAM from another vehicle at 1.350484048583
+CarlaCaService: received CAM from another vehicle at 1.354797024724
+CarlaCaService: received CAM from another vehicle at 1.354797048583
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.359476492201
+CarlaCaService: received CAM from another vehicle at 1.359476515337
+CarlaCaService: received CAM from another vehicle at 1.359476539787
+CarlaCaService: received CAM from another vehicle at 1.374933023859
+CarlaCaService: received CAM from another vehicle at 1.374933024724
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.410276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.414589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.434725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.459476492426
+CarlaCaService: received CAM from another vehicle at 1.459476515696
+CarlaCaService: received CAM from another vehicle at 1.459476540377
+CarlaCaService: received CAM from another vehicle at 1.470484023985
+CarlaCaService: received CAM from another vehicle at 1.47048404893
+CarlaCaService: received CAM from another vehicle at 1.474797024945
+CarlaCaService: received CAM from another vehicle at 1.47479704893
+CarlaCaService: received CAM from another vehicle at 1.494933023985
+CarlaCaService: received CAM from another vehicle at 1.494933024945
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.510276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.514589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 1.530484024055
+CarlaCaService: received CAM from another vehicle at 1.530484049113
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.534725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.534797025059
+CarlaCaService: received CAM from another vehicle at 1.534797049113
+CarlaCaService: received CAM from another vehicle at 1.554933024125
+CarlaCaService: received CAM from another vehicle at 1.554933025175
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.559476492666
+CarlaCaService: received CAM from another vehicle at 1.559476516082
+CarlaCaService: received CAM from another vehicle at 1.559476541003
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.610276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.614589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.634725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.650484024273
+CarlaCaService: received CAM from another vehicle at 1.650484049684
+CarlaCaService: received CAM from another vehicle at 1.654797025412
+CarlaCaService: received CAM from another vehicle at 1.654797049684
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.659476492925
+CarlaCaService: received CAM from another vehicle at 1.659476516496
+CarlaCaService: received CAM from another vehicle at 1.659476541665
+CarlaCaService: received CAM from another vehicle at 1.674933024273
+CarlaCaService: received CAM from another vehicle at 1.674933025412
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.710276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.714589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.734725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.759476493202
+CarlaCaService: received CAM from another vehicle at 1.759476516947
+CarlaCaService: received CAM from another vehicle at 1.759476542371
+CarlaCaService: received CAM from another vehicle at 1.77048402444
+CarlaCaService: received CAM from another vehicle at 1.770484050093
+CarlaCaService: received CAM from another vehicle at 1.774797025655
+CarlaCaService: received CAM from another vehicle at 1.774797050093
+CarlaCaService: received CAM from another vehicle at 1.79493302444
+CarlaCaService: received CAM from another vehicle at 1.794933025655
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.810276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.814589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 1.830484024527
+CarlaCaService: received CAM from another vehicle at 1.830484050304
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.834725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 1.83479702578
+CarlaCaService: received CAM from another vehicle at 1.834797050304
+CarlaCaService: received CAM from another vehicle at 1.854933024613
+CarlaCaService: received CAM from another vehicle at 1.854933025907
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.8594764935
+CarlaCaService: received CAM from another vehicle at 1.859476517426
+CarlaCaService: received CAM from another vehicle at 1.859476543113
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 1.910276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 1.914589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 1.934725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+** Event #3328   t=1.950276   Elapsed: 4.48015s (0m 04s)  65% completed  (65% total)
+     Speed:     ev/sec=1180.41   simsec/sec=0.628684   ev/simsec=1877.59
+     Messages:  created: 2716   present: 87   in FES: 15
+CarlaCaService: received CAM from another vehicle at 1.950484024794
+CarlaCaService: received CAM from another vehicle at 1.95048405096
+CarlaCaService: received CAM from another vehicle at 1.954797026171
+CarlaCaService: received CAM from another vehicle at 1.95479705096
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 1.95947649382
+CarlaCaService: received CAM from another vehicle at 1.959476517935
+CarlaCaService: received CAM from another vehicle at 1.959476543897
+CarlaCaService: received CAM from another vehicle at 1.974933024794
+CarlaCaService: received CAM from another vehicle at 1.974933026171
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.010276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.014589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.034725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.059476494161
+CarlaCaService: received CAM from another vehicle at 2.059476518479
+CarlaCaService: received CAM from another vehicle at 2.059476544725
+CarlaCaService: received CAM from another vehicle at 2.070484024987
+CarlaCaService: received CAM from another vehicle at 2.070484051425
+CarlaCaService: received CAM from another vehicle at 2.074797026444
+CarlaCaService: received CAM from another vehicle at 2.074797051425
+CarlaCaService: received CAM from another vehicle at 2.094933024987
+CarlaCaService: received CAM from another vehicle at 2.094933026444
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.110276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.114589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 2.130484025087
+CarlaCaService: received CAM from another vehicle at 2.13048405166
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.134725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.13479702658
+CarlaCaService: received CAM from another vehicle at 2.13479705166
+CarlaCaService: received CAM from another vehicle at 2.154933025188
+CarlaCaService: received CAM from another vehicle at 2.15493302672
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.159476494529
+CarlaCaService: received CAM from another vehicle at 2.159476519056
+CarlaCaService: received CAM from another vehicle at 2.15947654559
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.210276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.214589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.234725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.250484025403
+CarlaCaService: received CAM from another vehicle at 2.250484052381
+CarlaCaService: received CAM from another vehicle at 2.254797026989
+CarlaCaService: received CAM from another vehicle at 2.254797052381
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.259476494922
+CarlaCaService: received CAM from another vehicle at 2.259476519674
+CarlaCaService: received CAM from another vehicle at 2.259476546489
+CarlaCaService: received CAM from another vehicle at 2.274933025403
+CarlaCaService: received CAM from another vehicle at 2.274933026989
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.310276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.314589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.334725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.359476495343
+CarlaCaService: received CAM from another vehicle at 2.359476520323
+CarlaCaService: received CAM from another vehicle at 2.359476547422
+CarlaCaService: received CAM from another vehicle at 2.370484025622
+CarlaCaService: received CAM from another vehicle at 2.37048405287
+CarlaCaService: received CAM from another vehicle at 2.374797027262
+CarlaCaService: received CAM from another vehicle at 2.37479705287
+CarlaCaService: received CAM from another vehicle at 2.394933025622
+CarlaCaService: received CAM from another vehicle at 2.394933027262
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.410276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.414589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 2.430484025734
+CarlaCaService: received CAM from another vehicle at 2.43048405306
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.434725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.434797027345
+CarlaCaService: received CAM from another vehicle at 2.43479705306
+CarlaCaService: received CAM from another vehicle at 2.454933025851
+CarlaCaService: received CAM from another vehicle at 2.454933027422
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.459476495786
+CarlaCaService: received CAM from another vehicle at 2.459476521007
+CarlaCaService: received CAM from another vehicle at 2.4594765483
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.510276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.514589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.534725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.550484026087
+CarlaCaService: received CAM from another vehicle at 2.550484053616
+CarlaCaService: received CAM from another vehicle at 2.554797027575
+CarlaCaService: received CAM from another vehicle at 2.554797053616
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.559476496263
+CarlaCaService: received CAM from another vehicle at 2.559476521729
+CarlaCaService: received CAM from another vehicle at 2.559476549205
+CarlaCaService: received CAM from another vehicle at 2.574933026087
+CarlaCaService: received CAM from another vehicle at 2.574933027575
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.610276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.614589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.634725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.659476496765
+CarlaCaService: received CAM from another vehicle at 2.659476522483
+CarlaCaService: received CAM from another vehicle at 2.659476550149
+CarlaCaService: received CAM from another vehicle at 2.670484026327
+CarlaCaService: received CAM from another vehicle at 2.670484054
+CarlaCaService: received CAM from another vehicle at 2.674797027744
+CarlaCaService: received CAM from another vehicle at 2.674797054
+CarlaCaService: received CAM from another vehicle at 2.694933026327
+CarlaCaService: received CAM from another vehicle at 2.694933027744
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.710276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.714589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CarlaCaService: received CAM from another vehicle at 2.730484026451
+CarlaCaService: received CAM from another vehicle at 2.730484054198
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.734725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.734797027834
+CarlaCaService: received CAM from another vehicle at 2.734797054198
+CarlaCaService: received CAM from another vehicle at 2.754933026573
+CarlaCaService: received CAM from another vehicle at 2.75493302793
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.759476497297
+CarlaCaService: received CAM from another vehicle at 2.759476523273
+CarlaCaService: received CAM from another vehicle at 2.759476551137
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.810276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.814589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.834725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CarlaCaService: received CAM from another vehicle at 2.850484026819
+CarlaCaService: received CAM from another vehicle at 2.850484054804
+CarlaCaService: received CAM from another vehicle at 2.854797028129
+CarlaCaService: received CAM from another vehicle at 2.854797054804
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.85947649786
+CarlaCaService: received CAM from another vehicle at 2.859476524094
+CarlaCaService: received CAM from another vehicle at 2.85947655216
+CarlaCaService: received CAM from another vehicle at 2.874933026819
+CarlaCaService: received CAM from another vehicle at 2.874933028129
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 2.910276337038
+PacketCapture: CPM 95 bytes -> UDP 9602
+CHECK: POC=1 sender=1877275050
+CHECK: POC=1 sender=1877275050
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 2.914589411509
+PacketCapture: CPM 78 bytes -> UDP 9604
+CHECK: POC=-1 sender=1877275070
+CHECK: POC=-1 sender=1877275070
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 2.934725173726
+PacketCapture: CPM 95 bytes -> UDP 9603
+CHECK: POC=1 sender=1877275060
+CHECK: POC=1 sender=1877275060
+PacketCapture: CAM 70 bytes -> UDP 9301
+CarlaCaService: received CAM from another vehicle at 2.959476498456
+CarlaCaService: received CAM from another vehicle at 2.959476524949
+CarlaCaService: received CAM from another vehicle at 2.959476553213
+CarlaCaService: received CAM from another vehicle at 2.970484027066
+CarlaCaService: received CAM from another vehicle at 2.97048405521
+CarlaCaService: received CAM from another vehicle at 2.974797028335
+CarlaCaService: received CAM from another vehicle at 2.97479705521
+CarlaCaService: received CAM from another vehicle at 2.994933027066
+CarlaCaService: received CAM from another vehicle at 2.994933028335
+** Event #5363   t=3   Elapsed: 5.83171s (0m 05s)  100% completed  (100% total)
+     Speed:     ev/sec=1504.92   simsec/sec=0.776674   ev/simsec=1937.65
+     Messages:  created: 4337   present: 86   in FES: 14
+
+<!> Simulation time limit reached -- at t=3s, event #5363
+
+Calling finish() at end of Run #0...
+[INFO]	Radio signal arrival computation count = 510
+[INFO]	Transmission count = 170
+[INFO]	Radio frame send count = 510
+[INFO]	Reception computation count = 510
+[INFO]	Interference computation count = 1704
+[INFO]	Reception decision computation count = 510
+[INFO]	Listening decision computation count = 684
+[INFO]	Reception cache hit = 85.7143 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+
+End.

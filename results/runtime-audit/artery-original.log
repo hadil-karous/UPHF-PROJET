@@ -1,0 +1,10 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
+Version: 5.6.2, build: internal, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /artery/src/artery/application/F2MD: 
+<!> Error: Could not load NED sources from '/artery/src/artery/application/F2MD': Declared package 'artery.application.F2MD' does not match expected package '' in file F2MD_CAMService.ned
+
+End.

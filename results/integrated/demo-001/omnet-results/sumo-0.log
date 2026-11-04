@@ -1,0 +1,7 @@
+***Starting server on port 8813 ***
+  waiting for 2 clients...
+  client connected
+  client connected
+Loading net-file from '/repo/cosimulation/sumo-integration/carla/Co-Simulation/Sumo/examples/uphf_piste/uphf_piste.net.xml' ... done (43ms).
+Loading done.
+Simulation version 1.12.0 started with time: 0.00

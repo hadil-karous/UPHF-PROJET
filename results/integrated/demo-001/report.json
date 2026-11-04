@@ -1,0 +1,97 @@
+{
+  "scenario": "explicit Gyrovia diagnostic derivative",
+  "rsu_count": 1,
+  "error": "FatalTraCIError('Connection closed by SUMO.')",
+  "ros_topics": [
+    [
+      "/carla/hero/perceived_objects",
+      [
+        "std_msgs/msg/String"
+      ]
+    ],
+    [
+      "/parameter_events",
+      [
+        "rcl_interfaces/msg/ParameterEvent"
+      ]
+    ],
+    [
+      "/rosout",
+      [
+        "rcl_interfaces/msg/Log"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/vehicle_1/camera/image_raw",
+      [
+        "sensor_msgs/msg/Image"
+      ]
+    ],
+    [
+      "/vehicle_1/gnss/fix",
+      [
+        "sensor_msgs/msg/NavSatFix"
+      ]
+    ],
+    [
+      "/vehicle_1/imu/data",
+      [
+        "sensor_msgs/msg/Imu"
+      ]
+    ],
+    [
+      "/vehicle_1/lidar/points",
+      [
+        "sensor_msgs/msg/PointCloud2"
+      ]
+    ],
+    [
+      "/vehicle_1/vehicle_status",
+      [
+        "geometry_msgs/msg/TwistStamped"
+      ]
+    ]
+  ],
+  "ros_nodes": [
+    "artery_ros2_bridge",
+    "cpm_ros2_bridge",
+    "exfmd_recorder"
+  ],
+  "topic_counts": {}
+}

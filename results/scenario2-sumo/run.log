@@ -1,0 +1,22 @@
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Loading net-file from '/tmp/exfmd-sumo/examples/uphf_piste/uphf_piste.net.xml' ... done (8ms).
+Loading done.
+Simulation version 1.19.0 started with time: 0.00.
+Simulation ended at time: 10.00
+Reason: The final simulation step has been reached.
+Performance: 
+ Duration: 0.01s
+ Real time factor: 769.231
+ UPS: 23076.923077
+Vehicles: 
+ Inserted: 2 (Loaded: 43)
+ Running: 2
+ Waiting: 0
+Statistics (avg of 0):
+ RouteLength: 0.00
+ Speed: 0.00
+ Duration: 0.00
+ WaitingTime: 0.00
+ TimeLoss: 0.00
+ DepartDelay: 0.00
+

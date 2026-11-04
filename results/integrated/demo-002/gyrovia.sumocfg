@@ -1,0 +1,1 @@
+<configuration><input><net-file value="/repo/cosimulation/sumo-integration/carla/Co-Simulation/Sumo/examples/uphf_piste/uphf_piste.net.xml"/><route-files value="hero.rou.xml"/></input><time><step-length value="0.05"/><end value="5"/></time></configuration>

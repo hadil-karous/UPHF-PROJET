@@ -1,0 +1,336 @@
+[INFO] [1793817229.074975880] [artery_ros2_bridge]: Publisher RAW: /simulator/vehicle1/cam
+[INFO] [1793817229.076770965] [artery_ros2_bridge]: Publisher RAW: /simulator/vehicle2/cam
+[INFO] [1793817229.079454966] [artery_ros2_bridge]: Publisher RAW: /simulator/vehicle3/cam
+[INFO] [1793817229.090213594] [artery_ros2_bridge]: UDP JSON listener port 9003
+[INFO] [1793817229.096562093] [artery_ros2_bridge]: UDP JSON listener port 9002
+[INFO] [1793817229.099236815] [artery_ros2_bridge]: UDP JSON listener port 9001
+[INFO] [1793817229.102064676] [artery_ros2_bridge]: UDP RAW listener port 9301 → vehicle1
+[INFO] [1793817229.108110999] [artery_ros2_bridge]: Artery → ROS2 bridge démarré
+[INFO] [1793817229.137656494] [cpm_ros2_bridge]: Publisher RAW CPM: /simulator/vehicle1/cpm
+[INFO] [1793817229.141462424] [cpm_ros2_bridge]: Publisher RAW CPM: /simulator/vehicle2/cpm
+[INFO] [1793817229.155992723] [cpm_ros2_bridge]: Publisher RAW CPM: /simulator/vehicle3/cpm
+[INFO] [1793817229.179148701] [artery_ros2_bridge]: UDP RAW listener port 9303 → vehicle3
+[INFO] [1793817229.185221935] [cpm_ros2_bridge]: UDP RAW CPM listener port 9601 -> vehicle1
+[INFO] [1793817229.188198769] [artery_ros2_bridge]: UDP RAW listener port 9302 → vehicle2
+[INFO] [1793817229.191207478] [cpm_ros2_bridge]: CPM -> ROS2 bridge demarre
+[INFO] [1793817229.196886603] [cpm_ros2_bridge]: UDP RAW CPM listener port 9602 -> vehicle2
+[INFO] [1793817229.201248254] [cpm_ros2_bridge]: UDP RAW CPM listener port 9603 -> vehicle3
+/repo/cosimulation/sumo-integration/carla/Co-Simulation/Sumo/sumo_integration/sumo_simulation.py:299: FutureWarning: This search incorrectly ignores the root element, and will be fixed in a future version.  If you rely on the current behaviour, change it to './/net-file'
+  tag = tree.find('//net-file')
+WARNING: No InMemoryMap cache found. Setting up local map. This may take a while... 
+[FusionDetector] Sensors attachés sur vehicle.tesla.model3
+step 0 vehicles 3
+[INFO] [1793817243.091804796] [artery_ros2_bridge]: Publisher CAM: /its/cam/v161
+[INFO] [1793817243.113782010] [artery_ros2_bridge]: Publisher CAM: /its/cam/v234
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.3)]
+[INFO] [1793817244.652500770] [artery_ros2_bridge]: Publisher CAM: /its/cam/v88
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 12.7)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 12.9)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 12.9)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 12.9)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+step 10 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 12.9)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.0)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.0)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.2)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.2)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.1)]
+[DET] 2 objets: [('Car', 1.0, 5.2), ('Car', 1.0, 13.3)]
+step 20 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.4)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.4)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.3)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.5)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.4)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.6)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.5)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.7)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.6)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.8)]
+step 30 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.8)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.8)]
+[DET] 2 objets: [('Car', 1.0, 5.3), ('Car', 1.0, 13.7)]
+[DET] 2 objets: [('Car', 1.0, 5.4), ('Car', 1.0, 13.8)]
+[DET] 2 objets: [('Car', 1.0, 5.4), ('Car', 1.0, 13.8)]
+[DET] 2 objets: [('Car', 1.0, 5.4), ('Car', 1.0, 13.8)]
+[DET] 2 objets: [('Car', 1.0, 5.4), ('Car', 1.0, 13.9)]
+[DET] 2 objets: [('Car', 1.0, 5.5), ('Car', 1.0, 13.9)]
+[DET] 2 objets: [('Car', 1.0, 5.5), ('Car', 1.0, 13.9)]
+[DET] 2 objets: [('Car', 1.0, 5.5), ('Car', 1.0, 14.0)]
+step 40 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 5.5), ('Car', 1.0, 13.9)]
+[DET] 2 objets: [('Car', 1.0, 5.6), ('Car', 1.0, 14.0)]
+[DET] 2 objets: [('Car', 1.0, 5.6), ('Car', 1.0, 14.0)]
+[DET] 2 objets: [('Car', 1.0, 5.6), ('Car', 1.0, 14.0)]
+[DET] 2 objets: [('Car', 1.0, 5.7), ('Car', 1.0, 14.1)]
+[DET] 2 objets: [('Car', 1.0, 5.7), ('Car', 1.0, 14.1)]
+[DET] 2 objets: [('Car', 1.0, 5.8), ('Car', 1.0, 14.1)]
+[DET] 2 objets: [('Car', 1.0, 5.8), ('Car', 1.0, 14.1)]
+[DET] 2 objets: [('Car', 1.0, 5.8), ('Car', 1.0, 14.2)]
+[DET] 2 objets: [('Car', 1.0, 5.9), ('Car', 1.0, 14.2)]
+step 50 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 5.9), ('Car', 1.0, 14.3)]
+[DET] 2 objets: [('Car', 1.0, 5.9), ('Car', 1.0, 14.3)]
+[DET] 2 objets: [('Car', 1.0, 6.0), ('Car', 1.0, 14.4)]
+[DET] 2 objets: [('Car', 1.0, 6.0), ('Car', 1.0, 14.5)]
+[DET] 2 objets: [('Car', 1.0, 6.1), ('Car', 1.0, 14.5)]
+[DET] 2 objets: [('Car', 1.0, 6.1), ('Car', 1.0, 14.5)]
+[DET] 2 objets: [('Car', 1.0, 6.2), ('Car', 1.0, 14.6)]
+[DET] 2 objets: [('Car', 1.0, 6.2), ('Car', 1.0, 14.6)]
+[DET] 2 objets: [('Car', 1.0, 6.2), ('Car', 1.0, 15.3)]
+[DET] 2 objets: [('Car', 1.0, 6.2), ('Car', 1.0, 15.3)]
+step 60 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 6.3), ('Car', 1.0, 15.6)]
+[DET] 2 objets: [('Car', 1.0, 6.4), ('Car', 1.0, 15.7)]
+[DET] 2 objets: [('Car', 1.0, 6.4), ('Car', 1.0, 15.7)]
+[DET] 2 objets: [('Car', 1.0, 6.4), ('Car', 1.0, 15.8)]
+[DET] 2 objets: [('Car', 1.0, 6.5), ('Car', 1.0, 15.9)]
+[DET] 2 objets: [('Car', 1.0, 6.6), ('Car', 1.0, 15.9)]
+[DET] 2 objets: [('Car', 1.0, 6.7), ('Car', 1.0, 16.3)]
+[DET] 2 objets: [('Car', 1.0, 6.7), ('Car', 1.0, 16.3)]
+[DET] 2 objets: [('Car', 1.0, 6.8), ('Car', 1.0, 16.4)]
+[DET] 2 objets: [('Car', 1.0, 6.8), ('Car', 1.0, 16.4)]
+step 70 vehicles 3
+[DET] 2 objets: [('Car', 1.0, 6.9), ('Car', 1.0, 16.3)]
+[DET] 2 objets: [('Car', 1.0, 6.9), ('Car', 1.0, 16.4)]
+[DET] 2 objets: [('Car', 1.0, 6.9), ('Car', 1.0, 16.3)]
+[DET] 2 objets: [('Car', 1.0, 7.0), ('Car', 1.0, 16.4)]
+{
+  "scenario": "explicit Gyrovia diagnostic derivative",
+  "rsu_count": 1,
+  "vehicles": 3,
+  "samples": 225,
+  "displacement_m": 4.718836627879975,
+  "max_sync_position_error_m": 1.9660499219753547e-06,
+  "max_speed_m_s": 3.999959666124778,
+  "fusion_objects": [
+    {
+      "x": 6.999878952689212,
+      "y": -0.007410554052010354,
+      "z": -1.6694371735752696,
+      "vx": 0.4289021746752362,
+      "vy": 0.08912672536248673,
+      "distance": 6.999882875349614,
+      "velocity": 0.43806466259558874,
+      "class": "Car",
+      "class_id": 1,
+      "score": 1.0,
+      "track_id": 0,
+      "hits": 74
+    },
+    {
+      "x": 16.036284631313357,
+      "y": 2.6392126688832183,
+      "z": -1.6717356658762041,
+      "vx": 0.41942576133939874,
+      "vy": 1.0060370306456738,
+      "distance": 16.252011207481083,
+      "velocity": 1.0899671904720338,
+      "class": "Car",
+      "class_id": 1,
+      "score": 1.0,
+      "track_id": 1,
+      "hits": 52
+    }
+  ],
+  "wall_seconds": 83.41199637299997,
+  "ros_topics": [
+    [
+      "/carla/hero/perceived_objects",
+      [
+        "std_msgs/msg/String"
+      ]
+    ],
+    [
+      "/its/cam/v161",
+      [
+        "etsi_its_cam_msgs/msg/CAM"
+      ]
+    ],
+    [
+      "/its/cam/v234",
+      [
+        "etsi_its_cam_msgs/msg/CAM"
+      ]
+    ],
+    [
+      "/its/cam/v88",
+      [
+        "etsi_its_cam_msgs/msg/CAM"
+      ]
+    ],
+    [
+      "/parameter_events",
+      [
+        "rcl_interfaces/msg/ParameterEvent"
+      ]
+    ],
+    [
+      "/rosout",
+      [
+        "rcl_interfaces/msg/Log"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/vehicle_1/camera/image_raw",
+      [
+        "sensor_msgs/msg/Image"
+      ]
+    ],
+    [
+      "/vehicle_1/gnss/fix",
+      [
+        "sensor_msgs/msg/NavSatFix"
+      ]
+    ],
+    [
+      "/vehicle_1/imu/data",
+      [
+        "sensor_msgs/msg/Imu"
+      ]
+    ],
+    [
+      "/vehicle_1/lidar/points",
+      [
+        "sensor_msgs/msg/PointCloud2"
+      ]
+    ],
+    [
+      "/vehicle_1/odometry",
+      [
+        "nav_msgs/msg/Odometry"
+      ]
+    ],
+    [
+      "/vehicle_1/vehicle_status",
+      [
+        "geometry_msgs/msg/TwistStamped"
+      ]
+    ],
+    [
+      "/vehicle_1/vehicle_transform",
+      [
+        "geometry_msgs/msg/TransformStamped"
+      ]
+    ]
+  ],
+  "ros_nodes": [
+    "artery_ros2_bridge",
+    "cpm_ros2_bridge",
+    "exfmd_recorder",
+    "vehicle_agent_1"
+  ],
+  "topic_counts": {
+    "/vehicle_1/lidar/points": {
+      "count": 74,
+      "first": 5990.080696274,
+      "last": 6060.812172704,
+      "last_bytes": 5264
+    },
+    "/carla/hero/perceived_objects": {
+      "count": 74,
+      "first": 5990.085684672,
+      "last": 6060.843622298
+    },
+    "/simulator/vehicle1/cam": {
+      "count": 39,
+      "first": 5990.090112385,
+      "last": 6066.22010545
+    },
+    "/vehicle_1/gnss/fix": {
+      "count": 74,
+      "first": 5990.110831135,
+      "last": 6060.926657016
+    },
+    "/vehicle_1/imu/data": {
+      "count": 74,
+      "first": 5990.120461301,
+      "last": 6060.930028861
+    },
+    "/vehicle_1/vehicle_status": {
+      "count": 1415,
+      "first": 5990.130811579,
+      "last": 6067.866887885
+    },
+    "/simulator/vehicle3/cam": {
+      "count": 39,
+      "first": 5990.134154397,
+      "last": 6066.250409974
+    },
+    "/vehicle_1/camera/image_raw": {
+      "count": 74,
+      "first": 5990.894338782,
+      "last": 6062.706065092,
+      "last_bytes": 691200
+    },
+    "/simulator/vehicle2/cam": {
+      "count": 38,
+      "first": 5991.690898758,
+      "last": 6066.214930608
+    },
+    "/simulator/vehicle2/cpm": {
+      "count": 38,
+      "first": 5991.701928552,
+      "last": 6066.217702948
+    },
+    "/its/cam/v161": {
+      "count": 38,
+      "first": 5993.592375038,
+      "last": 6066.254950014
+    },
+    "/its/cam/v234": {
+      "count": 38,
+      "first": 5993.640522833,
+      "last": 6066.285435555
+    },
+    "/its/cam/v88": {
+      "count": 37,
+      "first": 5994.483049684,
+      "last": 6066.228655933
+    }
+  }
+}

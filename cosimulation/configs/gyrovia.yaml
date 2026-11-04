@@ -1,0 +1,12 @@
+﻿# Minimal Gyrovia settings derived from the actual VehicleAgent consumers.
+hero_ids: ['0']
+carla:
+  host: 127.0.0.1
+  port: 2000
+  timeout: 60.0
+  fixed_delta_seconds: 0.05
+sensors:
+  camera: {enabled: true, width: 640, height: 360, fov: 90, publish_rate: 5}
+  lidar: {enabled: true, channels: 16, range: 40, points_per_second: 16000, rotation_frequency: 10, publish_rate: 10}
+  gnss: {enabled: true}
+  imu: {enabled: true, publish_rate: 20}

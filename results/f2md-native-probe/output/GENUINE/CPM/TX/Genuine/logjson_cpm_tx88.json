@@ -1,0 +1,705 @@
+{"CPM_TX":[
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.210276337038,
+		"referenceTime": 54738,
+		"Xsumoposition": 3.510426,
+		"Ysumoposition": 50.318415,
+		"longitude": 35104261,
+		"latitude": 503184145,
+		"longspeed": 0.222397,
+		"longacceleration": 1.469944,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -454,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.310276337038,
+		"referenceTime": 54838,
+		"Xsumoposition": 3.510426,
+		"Ysumoposition": 50.318415,
+		"longitude": 35104259,
+		"latitude": 503184148,
+		"longspeed": 0.359756,
+		"longacceleration": 1.361458,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -454,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.410276337038,
+		"referenceTime": 54938,
+		"Xsumoposition": 3.510426,
+		"Ysumoposition": 50.318415,
+		"longitude": 35104258,
+		"latitude": 503184152,
+		"longspeed": 0.486180,
+		"longacceleration": 1.142004,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -454,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.510276337038,
+		"referenceTime": 55038,
+		"Xsumoposition": 3.510426,
+		"Ysumoposition": 50.318416,
+		"longitude": 35104256,
+		"latitude": 503184156,
+		"longspeed": 0.487729,
+		"longacceleration": -0.217997,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -454,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.610276337038,
+		"referenceTime": 55138,
+		"Xsumoposition": 3.510425,
+		"Ysumoposition": 50.318416,
+		"longitude": 35104254,
+		"latitude": 503184160,
+		"longspeed": 0.494153,
+		"longacceleration": -0.038639,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -454,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.710276337038,
+		"referenceTime": 55238,
+		"Xsumoposition": 3.510425,
+		"Ysumoposition": 50.318416,
+		"longitude": 35104251,
+		"latitude": 503184165,
+		"longspeed": 0.501747,
+		"longacceleration": -0.007486,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -455,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.810276337038,
+		"referenceTime": 55338,
+		"Xsumoposition": 3.510425,
+		"Ysumoposition": 50.318417,
+		"longitude": 35104249,
+		"latitude": 503184169,
+		"longspeed": 0.514469,
+		"longacceleration": 0.067382,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -137,
+				"position_yCoordinate": -456,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 0.910276337038,
+		"referenceTime": 55438,
+		"Xsumoposition": 3.510425,
+		"Ysumoposition": 50.318417,
+		"longitude": 35104247,
+		"latitude": 503184174,
+		"longspeed": 0.525682,
+		"longacceleration": 0.047841,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -138,
+				"position_yCoordinate": -457,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.010276337038,
+		"referenceTime": 55538,
+		"Xsumoposition": 3.510425,
+		"Ysumoposition": 50.318418,
+		"longitude": 35104245,
+		"latitude": 503184178,
+		"longspeed": 0.554611,
+		"longacceleration": 0.274413,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -138,
+				"position_yCoordinate": -459,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.110276337038,
+		"referenceTime": 55638,
+		"Xsumoposition": 3.510424,
+		"Ysumoposition": 50.318418,
+		"longitude": 35104243,
+		"latitude": 503184183,
+		"longspeed": 0.576989,
+		"longacceleration": 0.100879,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -139,
+				"position_yCoordinate": -461,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.210276337038,
+		"referenceTime": 55738,
+		"Xsumoposition": 3.510424,
+		"Ysumoposition": 50.318419,
+		"longitude": 35104240,
+		"latitude": 503184189,
+		"longspeed": 0.621917,
+		"longacceleration": 0.598431,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -140,
+				"position_yCoordinate": -464,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.310276337038,
+		"referenceTime": 55838,
+		"Xsumoposition": 3.510424,
+		"Ysumoposition": 50.318419,
+		"longitude": 35104238,
+		"latitude": 503184194,
+		"longspeed": 0.651752,
+		"longacceleration": 0.517826,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -141,
+				"position_yCoordinate": -467,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.410276337038,
+		"referenceTime": 55938,
+		"Xsumoposition": 3.510423,
+		"Ysumoposition": 50.318420,
+		"longitude": 35104235,
+		"latitude": 503184200,
+		"longspeed": 0.697596,
+		"longacceleration": 0.342347,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -142,
+				"position_yCoordinate": -471,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.510276337038,
+		"referenceTime": 56038,
+		"Xsumoposition": 3.510423,
+		"Ysumoposition": 50.318421,
+		"longitude": 35104232,
+		"latitude": 503184206,
+		"longspeed": 0.742633,
+		"longacceleration": 0.270732,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -143,
+				"position_yCoordinate": -474,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.610276337038,
+		"referenceTime": 56138,
+		"Xsumoposition": 3.510423,
+		"Ysumoposition": 50.318421,
+		"longitude": 35104229,
+		"latitude": 503184213,
+		"longspeed": 0.802398,
+		"longacceleration": 0.544691,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -144,
+				"position_yCoordinate": -478,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.710276337038,
+		"referenceTime": 56238,
+		"Xsumoposition": 3.510423,
+		"Ysumoposition": 50.318422,
+		"longitude": 35104225,
+		"latitude": 503184220,
+		"longspeed": 0.850087,
+		"longacceleration": 0.347968,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -146,
+				"position_yCoordinate": -483,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.810276337038,
+		"referenceTime": 56338,
+		"Xsumoposition": 3.510422,
+		"Ysumoposition": 50.318423,
+		"longitude": 35104222,
+		"latitude": 503184228,
+		"longspeed": 0.922220,
+		"longacceleration": 0.461452,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -147,
+				"position_yCoordinate": -488,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 1.910276337038,
+		"referenceTime": 56438,
+		"Xsumoposition": 3.510422,
+		"Ysumoposition": 50.318424,
+		"longitude": 35104218,
+		"latitude": 503184237,
+		"longspeed": 0.987522,
+		"longacceleration": 0.542925,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -149,
+				"position_yCoordinate": -493,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.010276337038,
+		"referenceTime": 56538,
+		"Xsumoposition": 3.510421,
+		"Ysumoposition": 50.318425,
+		"longitude": 35104213,
+		"latitude": 503184245,
+		"longspeed": 1.049596,
+		"longacceleration": 0.450293,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -150,
+				"position_yCoordinate": -498,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.110276337038,
+		"referenceTime": 56638,
+		"Xsumoposition": 3.510421,
+		"Ysumoposition": 50.318426,
+		"longitude": 35104209,
+		"latitude": 503184255,
+		"longspeed": 1.132031,
+		"longacceleration": 0.608738,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -152,
+				"position_yCoordinate": -504,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.210276337038,
+		"referenceTime": 56738,
+		"Xsumoposition": 3.510420,
+		"Ysumoposition": 50.318427,
+		"longitude": 35104204,
+		"latitude": 503184265,
+		"longspeed": 1.201255,
+		"longacceleration": 0.381886,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -154,
+				"position_yCoordinate": -510,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.310276337038,
+		"referenceTime": 56838,
+		"Xsumoposition": 3.510420,
+		"Ysumoposition": 50.318428,
+		"longitude": 35104199,
+		"latitude": 503184276,
+		"longspeed": 1.289407,
+		"longacceleration": 0.433712,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -156,
+				"position_yCoordinate": -516,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.410276337038,
+		"referenceTime": 56938,
+		"Xsumoposition": 3.510419,
+		"Ysumoposition": 50.318429,
+		"longitude": 35104193,
+		"latitude": 503184288,
+		"longspeed": 1.373554,
+		"longacceleration": 0.474637,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -158,
+				"position_yCoordinate": -523,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.510276337038,
+		"referenceTime": 57038,
+		"Xsumoposition": 3.510419,
+		"Ysumoposition": 50.318430,
+		"longitude": 35104187,
+		"latitude": 503184300,
+		"longspeed": 1.469245,
+		"longacceleration": 1.229348,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -160,
+				"position_yCoordinate": -529,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.610276337038,
+		"referenceTime": 57138,
+		"Xsumoposition": 3.510418,
+		"Ysumoposition": 50.318431,
+		"longitude": 35104181,
+		"latitude": 503184314,
+		"longspeed": 1.553886,
+		"longacceleration": 0.830645,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -162,
+				"position_yCoordinate": -536,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.710276337038,
+		"referenceTime": 57238,
+		"Xsumoposition": 3.510417,
+		"Ysumoposition": 50.318433,
+		"longitude": 35104175,
+		"latitude": 503184327,
+		"longspeed": 1.634487,
+		"longacceleration": 0.867904,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -164,
+				"position_yCoordinate": -543,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.810276337038,
+		"referenceTime": 57338,
+		"Xsumoposition": 3.510417,
+		"Ysumoposition": 50.318434,
+		"longitude": 35104168,
+		"latitude": 503184342,
+		"longspeed": 1.730840,
+		"longacceleration": 0.963119,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -166,
+				"position_yCoordinate": -550,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+		"sourcePseudoId": 1877275050,
+		"PseudonymChangeStrategy": "Car2car",
+		"sourceId": 88,
+		"sourceSumoId": "hero",
+		"misbehaviorType": "Genuine",
+		"tx_timestamp": 2.910276337038,
+		"referenceTime": 57438,
+		"Xsumoposition": 3.510416,
+		"Ysumoposition": 50.318436,
+		"longitude": 35104160,
+		"latitude": 503184358,
+		"longspeed": 1.846235,
+		"longacceleration": 1.217686,
+		"zAngularVelocity": 0,
+		"objects":[
+			{
+				"objectId": 1,
+				"measurementDeltaTime": 1,
+				"position_xCoordinate": -168,
+				"position_yCoordinate": -557,
+				"velocityMagnitudeValue": 16383,
+			}
+		]
+	},
+	{
+	}
+]}
+

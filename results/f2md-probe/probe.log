@@ -1,0 +1,298 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
+Version: 5.6.2, build: internal, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /artery/src:  153
+Loading NED files from /artery/extern/veins/src/veins:  43
+Loading NED files from /artery/extern/inet/src:  670
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20261104-18:25:38-254
+Setting up network "artery.envmod.World"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.5e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 24   present: 24   in FES: 6
+CarlaCaService initialized, shm=/dev/shm/agent_0
+CamUdpExportService initialized
+CarlaPerceptionService initialized, perceived=/dev/shm/perceived_0
+CarlaCaService initialized, shm=/dev/shm/agent_1
+Node mbType=Genuine prob=0.3
+CarlaCaService initialized, shm=/dev/shm/agent_2
+CamUdpExportService initialized
+CarlaPerceptionService initialized, perceived=/dev/shm/perceived_2
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.159476490274
+CarlaCaService: received CAM from another vehicle at 0.159476512824
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.159476535867
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.214589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.214797434853
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.214797434854
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.234725173726
+CarlaPerceptionService::trigger called at 0.234725173726 elapsed=0.184725173726 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.234725173726
+CarlaCaService: received CAM from another vehicle at 0.23493319707
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.234933220414
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.246366276406
+CarlaPerceptionService::trigger called at 0.246366276406 elapsed=0.196366276406 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.246366276406
+CarlaCaService: received CAM from another vehicle at 0.246574299751
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.246574323094
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.259476490354
+CarlaCaService: received CAM from another vehicle at 0.259476512908
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.259476535953
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.314589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.314797434853
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.314797434857
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.334725173726
+CarlaPerceptionService::trigger called at 0.334725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.334725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.346366276406
+CarlaPerceptionService::trigger called at 0.346366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.346366276406
+CarlaCaService: received CAM from another vehicle at 0.346574299754
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.346574323098
+CarlaCaService: received CAM from another vehicle at 0.354933023345
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.354933046696
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.359476490478
+CarlaCaService: received CAM from another vehicle at 0.359476513038
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.35947653609
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.414589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.414797434855
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.414797434865
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.434725173726
+CarlaPerceptionService::trigger called at 0.434725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.434725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.446366276406
+CarlaPerceptionService::trigger called at 0.446366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.446366276406
+CarlaCaService: received CAM from another vehicle at 0.446574299762
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.446574323108
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.459476490632
+CarlaCaService: received CAM from another vehicle at 0.4594765132
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.459476536276
+CarlaCaService: received CAM from another vehicle at 0.474933023346
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.474933046719
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.514589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.514797434859
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.514797434909
+** Event #512   t=0.514797463155   Elapsed: 2.01777s (0m 02s)  51% completed  (51% total)
+     Speed:     ev/sec=254.241   simsec/sec=0.255132   ev/simsec=996.508
+     Messages:  created: 487   present: 87   in FES: 15
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.534725173726
+CarlaPerceptionService::trigger called at 0.534725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.534725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.546366276406
+CarlaPerceptionService::trigger called at 0.546366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.546366276406
+CarlaCaService: received CAM from another vehicle at 0.546574299806
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.546574323156
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.559476490787
+CarlaCaService: received CAM from another vehicle at 0.559476513371
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.559476536511
+CarlaCaService: received CAM from another vehicle at 0.594933023356
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.594933046792
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.614589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.614797434873
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.614797434993
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.634725173726
+CarlaPerceptionService::trigger called at 0.634725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.634725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.646366276406
+CarlaPerceptionService::trigger called at 0.646366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.646366276406
+CarlaCaService: received CAM from another vehicle at 0.64657429989
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.646574323253
+CarlaCaService: received CAM from another vehicle at 0.654933023374
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.654933046913
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.659476490944
+CarlaCaService: received CAM from another vehicle at 0.659476513553
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.659476536796
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.714589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.714797434899
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.714797435111
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.734725173726
+CarlaPerceptionService::trigger called at 0.734725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.734725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.746366276406
+CarlaPerceptionService::trigger called at 0.746366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.746366276406
+CarlaCaService: received CAM from another vehicle at 0.746574300008
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.746574323398
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.759476491104
+CarlaCaService: received CAM from another vehicle at 0.759476513753
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.759476537131
+CarlaCaService: received CAM from another vehicle at 0.774933023408
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.774933047081
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.814589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.814797434939
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.814797435261
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.834725173726
+CarlaPerceptionService::trigger called at 0.834725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.834725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.846366276406
+CarlaPerceptionService::trigger called at 0.846366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.846366276406
+CarlaCaService: received CAM from another vehicle at 0.846574300158
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.846574323588
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.859476491269
+CarlaCaService: received CAM from another vehicle at 0.859476513971
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.859476537516
+CarlaCaService: received CAM from another vehicle at 0.894933023455
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.894933047293
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9102
+PacketCapture: CAM 85 bytes -> UDP 9303
+CarlaCaService: sent CAM hero lat=50.3183 lon=3.51038 speed=3.38226 heading=343.184 at 0.914589411509
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.914797434995
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.914797435439
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9101
+PacketCapture: CAM 85 bytes -> UDP 9302
+CarlaCaService: sent CAM hero lat=50.3184 lon=3.51042 speed=2.71295 heading=343.184 at 0.934725173726
+CarlaPerceptionService::trigger called at 0.934725173726 elapsed=0.1 maxInterval=0.1
+PacketCapture: CPM 138 bytes -> UDP 9602
+CarlaPerceptionService: sent CPM with 2 CARLA objects at 0.934725173726
+CarlaCaService: sent ASN.1 CAM 41 bytes on port 9103
+PacketCapture: CAM 85 bytes -> UDP 9304
+CarlaCaService: sent CAM hero lat=50.3182 lon=3.51039 speed=3.97578 heading=48.0247 at 0.946366276406
+CarlaPerceptionService::trigger called at 0.946366276406 elapsed=0.1 maxInterval=0.1
+CarlaPerceptionService: no objects, skip CPM at 0.946366276406
+CarlaCaService: received CAM from another vehicle at 0.946574300336
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.946574323823
+CarlaCaService: received CAM from another vehicle at 0.954933023521
+CamUdpExportService: exported 41 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.95493304755
+PacketCapture: CAM 70 bytes -> UDP 9301
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.95947649144
+CarlaCaService: received CAM from another vehicle at 0.959476514214
+CamUdpExportService: exported 26 bytes ASN.1
+CarlaCaService: received CAM from another vehicle at 0.95947653795
+** Event #1210   t=1   Elapsed: 2.53076s (0m 02s)  100% completed  (100% total)
+     Speed:     ev/sec=1358.71   simsec/sec=0.94584   ev/simsec=1436.51
+     Messages:  created: 1037   present: 83   in FES: 13
+
+<!> Simulation time limit reached -- at t=1s, event #1210
+
+Calling finish() at end of Run #0...
+[INFO]	Radio signal arrival computation count = 114
+[INFO]	Transmission count = 38
+[INFO]	Radio frame send count = 114
+[INFO]	Reception computation count = 114
+[INFO]	Interference computation count = 384
+[INFO]	Reception decision computation count = 114
+[INFO]	Listening decision computation count = 156
+[INFO]	Reception cache hit = 85.7143 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+
+End.

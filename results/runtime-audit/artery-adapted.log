@@ -1,0 +1,21 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
+Version: 5.6.2, build: internal, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from /artery/src:  153
+Loading NED files from /artery/extern/veins/src/veins:  43
+Loading NED files from /artery/extern/inet/src:  670
+
+Preparing for running configuration General, run #0...
+Assigned runID=General-0-20261104-18:14:30-160
+Setting up network "artery.envmod.World"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.4e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 3   present: 3   in FES: 2
+Error: Could not build output file 'results/sumo-0.log' (No such file or directory).
+Quitting (on error).

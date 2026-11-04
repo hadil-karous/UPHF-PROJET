@@ -1,0 +1,26 @@
+{
+  "server": "0.9.16",
+  "map": "uphf_gyrovia/Maps/uphf_gyrovia/uphf_gyrovia",
+  "v2x": "unavailable",
+  "rsu": "camera observation only, no V2X RSU",
+  "initial_position": [
+    73.44999694824219,
+    -47.055419921875,
+    -0.0021553421393036842
+  ],
+  "blueprint": "vehicle.tesla.model3",
+  "displacement_m": 23.699725773239866,
+  "max_speed_m_s": 24.93938603173882,
+  "movement_pass": false,
+  "sensor_callbacks": {
+    "lidar": 60,
+    "imu": 120,
+    "gnss": 120,
+    "rgb": 30
+  },
+  "wall_seconds": 80.91270967199989,
+  "simulation_seconds": 5.950000088661909,
+  "real_time_factor": 0.07353603794486352,
+  "max_height_deviation_m": 30.738923988305032,
+  "validation_note": "Historical straight-line diagnostic: vehicle left track and fell; superseded by 20261104-183524."
+}

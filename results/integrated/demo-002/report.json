@@ -1,0 +1,169 @@
+{
+  "scenario": "explicit Gyrovia diagnostic derivative",
+  "rsu_count": 1,
+  "samples": 75,
+  "displacement_m": 8.539544495845991,
+  "max_sync_position_error_m": 4.76837158203125e-07,
+  "max_speed_m_s": 3.992618420542567,
+  "fusion_objects": [],
+  "wall_seconds": 80.89071972900001,
+  "ros_topics": [
+    [
+      "/carla/hero/perceived_objects",
+      [
+        "std_msgs/msg/String"
+      ]
+    ],
+    [
+      "/its/cam/v88",
+      [
+        "etsi_its_cam_msgs/msg/CAM"
+      ]
+    ],
+    [
+      "/parameter_events",
+      [
+        "rcl_interfaces/msg/ParameterEvent"
+      ]
+    ],
+    [
+      "/rosout",
+      [
+        "rcl_interfaces/msg/Log"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle1/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle2/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cam",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/simulator/vehicle3/cpm",
+      [
+        "std_msgs/msg/ByteMultiArray"
+      ]
+    ],
+    [
+      "/vehicle_1/camera/image_raw",
+      [
+        "sensor_msgs/msg/Image"
+      ]
+    ],
+    [
+      "/vehicle_1/gnss/fix",
+      [
+        "sensor_msgs/msg/NavSatFix"
+      ]
+    ],
+    [
+      "/vehicle_1/imu/data",
+      [
+        "sensor_msgs/msg/Imu"
+      ]
+    ],
+    [
+      "/vehicle_1/lidar/points",
+      [
+        "sensor_msgs/msg/PointCloud2"
+      ]
+    ],
+    [
+      "/vehicle_1/odometry",
+      [
+        "nav_msgs/msg/Odometry"
+      ]
+    ],
+    [
+      "/vehicle_1/vehicle_status",
+      [
+        "geometry_msgs/msg/TwistStamped"
+      ]
+    ],
+    [
+      "/vehicle_1/vehicle_transform",
+      [
+        "geometry_msgs/msg/TransformStamped"
+      ]
+    ]
+  ],
+  "ros_nodes": [
+    "artery_ros2_bridge",
+    "cpm_ros2_bridge",
+    "exfmd_recorder",
+    "vehicle_agent_1"
+  ],
+  "topic_counts": {
+    "/vehicle_1/lidar/points": {
+      "count": 74,
+      "first": 5103.110437235,
+      "last": 5170.887924556,
+      "last_bytes": 5200
+    },
+    "/carla/hero/perceived_objects": {
+      "count": 74,
+      "first": 5103.11105535,
+      "last": 5170.895814016
+    },
+    "/vehicle_1/gnss/fix": {
+      "count": 74,
+      "first": 5103.188516094,
+      "last": 5170.945959849
+    },
+    "/vehicle_1/imu/data": {
+      "count": 74,
+      "first": 5103.198748469,
+      "last": 5170.957587824
+    },
+    "/vehicle_1/vehicle_status": {
+      "count": 1359,
+      "first": 5103.202446989,
+      "last": 5175.879323638
+    },
+    "/simulator/vehicle1/cam": {
+      "count": 39,
+      "first": 5103.20635676,
+      "last": 5174.241363244
+    },
+    "/vehicle_1/camera/image_raw": {
+      "count": 74,
+      "first": 5104.104544,
+      "last": 5172.708523697,
+      "last_bytes": 691200
+    },
+    "/simulator/vehicle2/cam": {
+      "count": 38,
+      "first": 5105.374595343,
+      "last": 5174.239884288
+    },
+    "/its/cam/v88": {
+      "count": 38,
+      "first": 5105.413979596,
+      "last": 5174.244699523
+    }
+  }
+}

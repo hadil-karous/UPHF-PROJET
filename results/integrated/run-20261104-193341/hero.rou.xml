@@ -1,0 +1,10 @@
+<routes><vType id="vehicle.tesla.model3" accel="1.5" decel="4.5" length="4.5" minGap="2" maxSpeed="4" /><vehicle id="hero" depart="0" departLane="best" type="vehicle.tesla.model3" departPos="3">
+        <route edges="13 3 -6 -9 -10" />
+    </vehicle>
+    <vehicle id="hero1" depart="0" departLane="best" type="vehicle.tesla.model3" departPos="10">
+        <route edges="13 3 -6 -9 -10" />
+    </vehicle>
+    <vehicle id="hero2" depart="0" departLane="best" type="vehicle.tesla.model3" departPos="17">
+        <route edges="13 3 -6 -9 -10" />
+    </vehicle>
+    </routes>

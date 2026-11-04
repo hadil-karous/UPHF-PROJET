@@ -1,0 +1,11 @@
+{
+  "mode": "offline replay of real final snapshot from demo-003",
+  "exit_code": 0,
+  "alerts": [],
+  "outputs": [
+    "output/GENUINE/CPM/RX/Genuine/logjson_cpm_rx161.json",
+    "output/GENUINE/CPM/TX/Genuine/logjson_cpm_tx161.json",
+    "output/GENUINE/LP/Genuine/logjson_lp161.json",
+    "output/Log/Genuine/log_vehicle_161"
+  ]
+}

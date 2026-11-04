@@ -9,13 +9,15 @@ import sys
 import threading
 import time
 import os
+from pathlib import Path
 
 import carla
 import rclpy
 from rclpy.executors import MultiThreadedExecutor
 import yaml
 
-sys.path.insert(0, '/home/syfra/CarlaSumoArtery-CoSimulation/carla/Co-Simulation/Sumo')
+SUMO_ROOT = Path(__file__).resolve().parent / 'sumo-integration' / 'carla' / 'Co-Simulation' / 'Sumo'
+sys.path.insert(0, str(SUMO_ROOT))
 from sumo_integration.carla_simulation import CarlaSimulation
 from sumo_integration.sumo_simulation import SumoSimulation
 from run_synchronization import SimulationSynchronization
@@ -30,9 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger("main")
 
 SUMO_HERO_IDS = ['hero', 'hero1', 'hero2']
-SUMO_CFG = os.path.expanduser(
-    '/home/syfra/CarlaSumoArtery-CoSimulation/carla/Co-Simulation/Sumo/examples/uphf_piste/uphf_piste.sumocfg'
-)
+SUMO_CFG = str(SUMO_ROOT / 'examples' / 'uphf_piste' / 'uphf_piste.sumocfg')
 
 def load_config(path):
     with open(path) as f:
@@ -41,12 +41,13 @@ def load_config(path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", default="configs/simulation.yaml")
+    parser.add_argument("--config", default=str(Path(__file__).resolve().parent / "configs" / "gyrovia.yaml"))
     args = parser.parse_args()
     cfg = load_config(args.config)
+    hero_ids = cfg.get("hero_ids", SUMO_HERO_IDS)
 
     rclpy.init()
-    executor = MultiThreadedExecutor(num_threads=len(SUMO_HERO_IDS) + 2)
+    executor = MultiThreadedExecutor(num_threads=len(hero_ids) + 2)
 
     # ── Connexion CARLA ───────────────────────────────────────────────────
     logger.info("Connexion CARLA %s:%d ...", cfg["carla"]["host"], cfg["carla"]["port"])
@@ -106,17 +107,17 @@ def main():
         logger.info("Attente des véhicules SUMO...")
         for _ in range(100):
             sync.tick()
-            world.tick()
+            # sync.tick() already advances CARLA.
             heroes = {k: v for k, v in sync.sumo2carla_ids.items()
-                      if k in SUMO_HERO_IDS}
-            if len(heroes) >= len(SUMO_HERO_IDS):
+                      if k in hero_ids}
+            if len(heroes) >= len(hero_ids):
                 break
             time.sleep(0.1)
 
         logger.info("Heroes SUMO dans CARLA: %s", heroes)
 
         # ── Attache VehicleAgent à chaque hero ─────────────────────────────
-        for i, sumo_id in enumerate(SUMO_HERO_IDS):
+        for i, sumo_id in enumerate(hero_ids):
             carla_id = heroes.get(sumo_id)
             if carla_id is None:
                 logger.warning("Hero %s non trouvé", sumo_id)
@@ -130,7 +131,7 @@ def main():
             executor.add_node(agent)
             logger.info("VehicleAgent[%d] → %s (carla_id=%d)", i, sumo_id, carla_id)
 
-        world.tick()
+        # CARLA advances only through sync.tick().
 
         logger.info("=" * 55)
         logger.info("%d véhicules actifs — topics ROS2 :", len(agents))
@@ -145,7 +146,7 @@ def main():
         executor_thread.start()
 
         # ── Boucle principale ──────────────────────────────────────────────
-        hero_actor = world.get_actor(heroes.get("hero", -1))
+        hero_actor = world.get_actor(heroes.get(hero_ids[0], -1))
         spec = world.get_spectator()
         prev_transforms = {agent: agent.vehicle.get_transform() for agent in agents}
         dt = cfg["carla"]["fixed_delta_seconds"]
@@ -154,7 +155,7 @@ def main():
         ros_publish_every = max(1, int(1.0 / (cfg["carla"]["fixed_delta_seconds"] * 20)))
         while True:
             sync.tick()
-            world.tick()
+            # sync.tick() already advances CARLA.
             tick_count += 1
             if tick_count % 20 == 0:  # toutes les ~2.5s
                 all_actors = world.get_actors()
@@ -187,7 +188,8 @@ def main():
                     dy = curr_t.location.y - prev_t.location.y
                     dz = curr_t.location.z - prev_t.location.z
                     import carla as _carla
-                    computed_vel = _carla.Vector3D(dx/dt, dy/dt, dz/dt)
+                    elapsed = dt * ros_publish_every
+                    computed_vel = _carla.Vector3D(dx/elapsed, dy/elapsed, dz/elapsed)
                     prev_transforms[agent] = curr_t
                     agent.update_state(
                         curr_t,

@@ -1,0 +1,11 @@
+{
+  "mapped_sumo_ids": [
+    "0"
+  ],
+  "mapped_samples": 60,
+  "displacement_m": {
+    "0": 9.755368397469816
+  },
+  "pass": true,
+  "wall_seconds": 42.095824213000014
+}

@@ -1,0 +1,233 @@
+{"CPM_RX":[
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 54738,
+		"rx_timestamp": 0.270500046688,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 54762,
+		"rx_timestamp": 0.294949023344,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 54838,
+		"rx_timestamp": 0.39050004669,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 54862,
+		"rx_timestamp": 0.414949023348,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 54938,
+		"rx_timestamp": 0.510500046733,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 54962,
+		"rx_timestamp": 0.534949023384,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55138,
+		"rx_timestamp": 0.69050004687,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55162,
+		"rx_timestamp": 0.714949023558,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55238,
+		"rx_timestamp": 0.810500047103,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55262,
+		"rx_timestamp": 0.834949023689,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55438,
+		"rx_timestamp": 0.99050004742,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55462,
+		"rx_timestamp": 1.014949024021,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55538,
+		"rx_timestamp": 1.110500047816,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55562,
+		"rx_timestamp": 1.134949024213,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55738,
+		"rx_timestamp": 1.290500048259,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55762,
+		"rx_timestamp": 1.314949024617,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 55838,
+		"rx_timestamp": 1.410500048756,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 55862,
+		"rx_timestamp": 1.434949024833,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56038,
+		"rx_timestamp": 1.590500049299,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56062,
+		"rx_timestamp": 1.614949025294,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56138,
+		"rx_timestamp": 1.710500049887,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56162,
+		"rx_timestamp": 1.734949025533,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56338,
+		"rx_timestamp": 1.890500050517,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56362,
+		"rx_timestamp": 1.914949026037,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56438,
+		"rx_timestamp": 2.010500051191,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56462,
+		"rx_timestamp": 2.034949026306,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56638,
+		"rx_timestamp": 2.190500051899,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56662,
+		"rx_timestamp": 2.214949026854,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56738,
+		"rx_timestamp": 2.310500052627,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56762,
+		"rx_timestamp": 2.334949027126,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 56938,
+		"rx_timestamp": 2.490500053247,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 56962,
+		"rx_timestamp": 2.514949027499,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 57038,
+		"rx_timestamp": 2.610500053806,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 57062,
+		"rx_timestamp": 2.634949027658,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 57238,
+		"rx_timestamp": 2.7905000544,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 57262,
+		"rx_timestamp": 2.814949028028,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275050,
+		"referenceTime": 57338,
+		"rx_timestamp": 2.910500055004,
+		"checkfailed": 1.000000
+	},
+	{
+		"sourceId": 1877275060,
+		"referenceTime": 57362,
+		"rx_timestamp": 2.93494902823,
+		"checkfailed": 1.000000
+	},
+	{
+	}
+]}
+
