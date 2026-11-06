@@ -14,7 +14,8 @@ from sumo_integration.sumo_simulation import SumoSimulation
 from sumo_integration.bridge_helper import BridgeHelper
 from run_synchronization import SimulationSynchronization
 from carla_multi_agent.vehicle_agent import VehicleAgent
-out=pathlib.Path('/repo/results/integrated')/os.environ.get('EXFMD_RUN','demo-002'); out.mkdir(parents=True,exist_ok=True)
+from carla_multi_agent.perception_contract import FrameAlignedWriter
+out=pathlib.Path(os.environ.get('EXFMD_OUTPUT_DIR',str(pathlib.Path('/repo/results/integrated')/os.environ.get('EXFMD_RUN','demo-002')))); out.mkdir(parents=True,exist_ok=True)
 (out/'running.json').write_text(json.dumps({'pid':__import__('os').getpid(),'started_utc':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()}))
 def load(name,path):
     spec=importlib.util.spec_from_file_location(name,path); m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
@@ -24,7 +25,8 @@ cpm=load('cpm_bridge','/ros_ws/cpm_os_bidge.py').CpmRos2Bridge()
 class Recorder(Node):
     def __init__(self):
         super().__init__('exfmd_recorder'); self.counts={}; self.subs=[]; self.known=set(); self.lock=threading.Lock()
-        self.ref={}; self.log=(out/'ros-messages.jsonl').open('w')
+        self.perception_writer=FrameAlignedWriter('/dev/shm/perceived_0', self.archive_perception); self.log=(out/'ros-messages.jsonl').open('w')
+        (out/'joined-perceptions').mkdir(exist_ok=True)
         for i in range(1,4):
             for kind in ['cam','cpm']: self.add(f'/simulator/vehicle{i}/{kind}',ByteMultiArray)
         self.add('/carla/hero/perceived_objects',String)
@@ -34,6 +36,8 @@ class Recorder(Node):
     def discover(self):
         for topic,types in self.get_topic_names_and_types():
             if types==['etsi_its_cam_msgs/msg/CAM']: self.add(topic,CAM)
+    def archive_perception(self, data):
+        (out/'joined-perceptions'/('frame-'+str(data['frame_id'])+'.json')).write_text(json.dumps(data,allow_nan=False))
     def add(self,topic,typ):
         if topic in self.known:return
         self.known.add(topic)
@@ -47,8 +51,7 @@ class Recorder(Node):
             if isinstance(msg,ByteMultiArray): d={'bytes':len(msg.data),'hex':b''.join(msg.data).hex()}
             self.log.write(json.dumps({'wall_monotonic':now,'topic':topic,'message':d},default=lambda x:x.hex() if isinstance(x,bytes) else str(x))+'\n'); self.log.flush()
             if isinstance(msg,String):
-                perception=json.loads(msg.data); perception.update(self.ref)
-                pathlib.Path('/dev/shm/perceived_0').write_text(json.dumps(perception))
+                self.perception_writer.publish(json.loads(msg.data))
 rec=Recorder()
 for n in [cam,cpm,rec]:executor.add_node(n)
 thread=threading.Thread(target=executor.spin,daemon=True); thread.start()
@@ -63,6 +66,10 @@ try:
     cfg=yaml.safe_load(pathlib.Path('/repo/cosimulation/configs/gyrovia.yaml').read_text(encoding='utf-8-sig'))
     for i in range(75):
         sync.tick()
+        frame_snapshot=w.get_snapshot()
+        rec.perception_writer.register(frame_snapshot.frame,traci.simulation.getTime())
+        with (out/'frame-times.jsonl').open('a') as timing:
+            timing.write(json.dumps({'frame_id':frame_snapshot.frame,'carla_time_s':frame_snapshot.timestamp.elapsed_seconds,'sumo_time_s':traci.simulation.getTime()})+'\n')
         for sid,cid in sync.sumo2carla_ids.items():
             v=w.get_actor(cid)
             if agent is None and sid=='hero':
@@ -82,7 +89,6 @@ try:
             gps=w.get_map().transform_to_geolocation(pos)
             if sid=='hero' and agent:
                 agent.update_state(v.get_transform(),carla.Vector3D(x=speed*math.cos(heading),y=speed*math.sin(heading)),v.get_angular_velocity(),v.get_control())
-                rec.ref={'ref_lat':gps.latitude,'ref_lon':gps.longitude,'ref_heading':(90+v.get_transform().rotation.yaw)%360}
             idx={'hero':0,'hero1':1,'hero2':2}[sid]
             pathlib.Path('/dev/shm/agent_'+str(idx)).write_bytes(struct.pack('7d',gps.latitude,gps.longitude,(90+v.get_transform().rotation.yaw)%360,speed,0.,0.,w.get_snapshot().timestamp.elapsed_seconds))
             rows.append([i,w.get_snapshot().frame,traci.simulation.getTime(),sid,pos.x,pos.y,pos.z,speed,pos.distance(expected.location)])
@@ -93,7 +99,6 @@ except BaseException as e:
     report['error']=repr(e);print('ERROR',repr(e),flush=True);raise
 finally:
     report['ros_topics']=rec.get_topic_names_and_types();report['ros_nodes']=rec.get_node_names()
-    with rec.lock:report['topic_counts']=dict(rec.counts)
     if agent:
         if agent._semantic_det:agent._semantic_det.destroy()
         for sensor in agent._sensors:
@@ -104,8 +109,10 @@ finally:
     if sync:sync.close()
     elif sumo:sumo.close()
     w.apply_settings(original);c.get_trafficmanager().set_synchronous_mode(False)
+    executor.shutdown(timeout_sec=5)
+    with rec.lock:report['topic_counts']=__import__('copy').deepcopy(rec.counts)
     with (out/'positions.csv').open('w',newline='') as f:
         wr=csv.writer(f);wr.writerow(['step','carla_frame','sumo_time','sumo_id','x','y','z','speed_m_s','sync_position_error_m']);wr.writerows(rows)
     (out/'report.json').write_text(json.dumps(report,indent=2));(out/'running.json').unlink(missing_ok=True)
-    executor.shutdown(timeout_sec=2);rclpy.shutdown();rec.log.close()
+    rclpy.shutdown();rec.log.close()
     print(json.dumps(report,indent=2),flush=True)

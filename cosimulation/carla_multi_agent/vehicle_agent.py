@@ -167,8 +167,10 @@ class VehicleAgent(Node):
             if hasattr(self, '_pub_perceived'):
                 import json as _json
                 msg = String()
-                msg.data = _json.dumps({'objects': objects, 'count': len(objects)})
-                self._pub_perceived.publish(msg)
+                perception = self._semantic_det.perception_snapshot() if self._semantic_det is not None else None
+                if perception is not None:
+                    msg.data = _json.dumps(perception, allow_nan=False)
+                    self._pub_perceived.publish(msg)
             if objects and self._detection_callback:
                 self._detection_callback(objects)
         except Exception as e:

@@ -1,7 +1,9 @@
 import os
 """Explicit diagnostic derivative, using shipped Gyrovia network and Artery services."""
-import pathlib, xml.etree.ElementTree as ET, configparser, subprocess, os, sys, copy
-out=pathlib.Path('/repo/results/integrated')/os.environ.get('EXFMD_RUN','demo-002'); out.mkdir(parents=True,exist_ok=True)
+import pathlib, xml.etree.ElementTree as ET, configparser, subprocess, os, sys, copy, json
+from cpm.runtime import validated_core
+core=validated_core()
+out=pathlib.Path(os.environ.get('EXFMD_OUTPUT_DIR',str(pathlib.Path('/repo/results/integrated')/os.environ.get('EXFMD_RUN','demo-002')))); out.mkdir(parents=True,exist_ok=True)
 # Archive and clear only the project's own shared state, so a fresh run cannot emit stale perception.
 prior=out/'prior-shm';prior.mkdir(exist_ok=True)
 for idx in range(3):
@@ -18,8 +20,13 @@ for idx in range(1,int(os.environ.get('EXFMD_VEHICLES','1'))):
     other=copy.deepcopy(v); other.set('id','hero'+str(idx)); other.set('departPos',str(3+7*idx));routes.append(other)
 ET.ElementTree(routes).write(out/'hero.rou.xml')
 (out/'gyrovia.sumocfg').write_text('<configuration><input><net-file value="'+str(base/'uphf_piste.net.xml')+'"/><route-files value="hero.rou.xml"/></input><time><step-length value="0.05"/><end value="5"/></time></configuration>')
-(out/'services.xml').write_text(pathlib.Path('/artery/scenarios/F2MD_Highway_CPM/services.xml').read_text().replace('<listener port="2002"','<listener port="2009"'))
-(out/'services-rsu.xml').write_bytes(pathlib.Path('/artery/scenarios/artery/services-rsu.xml').read_bytes())
+# This diagnostic deliberately instantiates no F2MD or attack service.
+(out/'services.xml').write_text('''<services>
+<service type="artery.application.CarlaCaService"><listener port="2001"/></service>
+<service type="artery.application.CamUdpExportService"><listener port="2001"/></service>
+<service type="artery.application.CarlaPerceptionService"><listener port="2009"/></service>
+</services>''')
+(out/'services-rsu.xml').write_text('<services><service type="artery.application.RsuCaService"><listener port="2001"/></service></services>')
 (out/'diagnostic.ini').write_text('''[General]
 network = artery.envmod.World
 sim-time-limit = 4s
@@ -56,6 +63,11 @@ result-dir = omnet-results
 ''')
 (out/'omnet-results').mkdir(exist_ok=True)
 cfg=configparser.ConfigParser(); cfg.read('/artery/build/run-artery.ini')
-cmd=['/omnetpp/bin/opp_run','-u','Cmdenv','-n','/artery/src:/artery/extern/veins/src/veins:/artery/extern/inet/src']+list(dict.fromkeys(cfg['Artery']['libraries'].split()))+['-f','diagnostic.ini']
+libraries=['-l/artery/build/extern/libveins.so','-l/artery/extern/inet/out/gcc-release/src/libINET.so',
+    '-l/artery/build/src/traci/libtraci.so','-l/artery/build/src/artery/envmod/libartery_envmod.so','-l'+str(core)]
+cmd=['/omnetpp/bin/opp_run','-u','Cmdenv','-n','/artery/src:/artery/extern/veins/src/veins:/artery/extern/inet/src']+list(dict.fromkeys(libraries))+['-f','diagnostic.ini']
+os.environ['LD_LIBRARY_PATH']=str(core.parent)+':'+os.environ.get('LD_LIBRARY_PATH','')
 print('Diagnostic Gyrovia derivative, not the original highway scenario',flush=True)
-raise SystemExit(subprocess.call(cmd,cwd=out))
+process=subprocess.Popen(cmd,cwd=out)
+(out/'artery-process.json').write_text(json.dumps({'pid':process.pid,'command':cmd,'core':str(core)},indent=2))
+raise SystemExit(process.wait())

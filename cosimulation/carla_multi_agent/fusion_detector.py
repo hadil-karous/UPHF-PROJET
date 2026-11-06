@@ -6,6 +6,11 @@ import numpy as np
 import threading
 import math
 import carla
+import copy
+import os
+import json
+from pathlib import Path
+from .perception_contract import snapshot
 
 # Tags sémantiques CARLA
 VEHICLE_TAG    = 14
@@ -40,8 +45,10 @@ class KalmanTracker:
         self.cls    = obj['class']
         self.cls_id = obj['class_id']
         self.score  = obj['score']
+        self.source_object_id = obj.get('object_id')
 
-    def predict(self):
+    def predict(self, dt=0.1):
+        self.F[0,3] = self.F[1,4] = self.F[2,5] = dt
         self.x = self.F @ self.x
         self.P = self.F @ self.P @ self.F.T + self.Q
 
@@ -54,6 +61,7 @@ class KalmanTracker:
         self.P  = (np.eye(6) - K @ self.H) @ self.P
         self.hits  += 1
         self.misses = 0
+        self.source_object_id = obj.get('object_id')
 
     def get_state(self):
         return {
@@ -62,6 +70,7 @@ class KalmanTracker:
             'z':         float(self.x[2]),
             'vx':        float(self.x[3]),
             'vy':        float(self.x[4]),
+            'vz':        float(self.x[5]),
             'distance':  float(math.sqrt(self.x[0]**2 + self.x[1]**2)),
             'velocity':  float(math.sqrt(self.x[3]**2 + self.x[4]**2)),
             'class':     self.cls,
@@ -69,12 +78,15 @@ class KalmanTracker:
             'score':     1.0,
             'track_id':  self.id,
             'hits':      self.hits,
+            'misses':    self.misses,
+            'source_object_id': self.source_object_id,
         }
 
 
 class FusionDetector:
     def __init__(self, world, hero, cfg):
         self.world  = world
+        self._map = world.get_map()
         self.hero   = hero
         self._lock  = threading.Lock()
 
@@ -86,6 +98,13 @@ class FusionDetector:
         # Trackers
         self._trackers = []
         self._latest   = []
+        self._latest_snapshot = None
+        self._measurement_time = None
+        self._fusion_lock = threading.Lock()
+        trace = os.environ.get('EXFMD_FUSION_TRACE_DIR')
+        self._trace_dir = Path(trace) if trace else None
+        if self._trace_dir is not None:
+            self._trace_dir.mkdir(parents=True, exist_ok=True)
 
         # Attacher les sensors
         self._sensors = []
@@ -152,11 +171,16 @@ class FusionDetector:
             ('object_idx', np.uint32),
             ('semantic_tag', np.uint32)
         ]))
-        with self._lock:
-            self._lidar_data = pts.copy()
-        self._fuse_and_track()
+        with self._fusion_lock:
+            if self._measurement_time is not None and data.timestamp <= self._measurement_time:
+                return
+            dt = data.timestamp - self._measurement_time if self._measurement_time is not None else 0.1
+            self._measurement_time = data.timestamp
+            with self._lock:
+                self._lidar_data = pts.copy()
+            self._fuse_and_track(data, dt)
 
-    def _fuse_and_track(self):
+    def _fuse_and_track(self, measurement, dt):
         with self._lock:
             if self._lidar_data is None:
                 return
@@ -166,10 +190,6 @@ class FusionDetector:
         # Filtrer points des objets d'intérêt
         mask = np.isin(pts['semantic_tag'], list(DETECTION_TAGS))
         pts  = pts[mask]
-        if len(pts) == 0:
-            with self._lock:
-                self._latest = []
-            return
 
         # Grouper par object_idx → centroïde
         raw_objects = []
@@ -196,17 +216,55 @@ class FusionDetector:
                 if cam_cls is not None:
                     cls_name, cls_id = cam_cls
 
+            # The sensor pose belongs to this measurement, not to the latest tick.
+            centre = measurement.transform.transform(carla.Location(x=cx, y=cy, z=cz))
             raw_objects.append({
-                'x': cx, 'y': cy, 'z': cz,
+                'x': centre.x, 'y': centre.y, 'z': centre.z,
                 'distance': dist,
                 'class': cls_name, 'class_id': cls_id,
                 'score': 1.0, 'object_id': int(obj_id),
             })
 
         # Kalman tracking
-        tracked = self._update_trackers(raw_objects)
+        tracked = self._update_trackers(raw_objects, dt=dt)
+        # Sensor mount is (0,0,2.5), without relative rotation. Reference is the
+        # bottom/front centre of the known ego bounding box (ground approximation).
+        box = self.hero.bounding_box
+        reference = measurement.transform.transform(carla.Location(
+            x=box.location.x + box.extent.x, y=box.location.y,
+            z=box.location.z - box.extent.z - 2.5))
+        forward = measurement.transform.transform(carla.Location(
+            x=box.location.x + box.extent.x + 1.0, y=box.location.y,
+            z=box.location.z - box.extent.z - 2.5))
+        def to_geo(xyz):
+            return self._map.transform_to_geolocation(carla.Location(x=xyz[0], y=xyz[1], z=xyz[2]))
+        contract = snapshot(tracked, measurement.frame, measurement.timestamp,
+            (reference.x, reference.y, reference.z), (forward.x, forward.y, forward.z), to_geo)
+        if getattr(self, '_trace_dir', None) is not None:
+            def geo_dict(xyz):
+                value=to_geo(xyz)
+                return dict(latitude=value.latitude,longitude=value.longitude,altitude=value.altitude)
+            evidence={'frame_id':measurement.frame,'measurement_time_s':measurement.timestamp,
+                'sensor_transform':measurement.transform.get_matrix(),
+                'reference_world':[reference.x,reference.y,reference.z],
+                'reference_geo':geo_dict((reference.x,reference.y,reference.z)),
+                'forward_geo':geo_dict((forward.x,forward.y,forward.z)),
+                'raw_detections_world':raw_objects,'tracked_world':tracked,'contract':contract,
+                'tracked_geo':[geo_dict((s['x'],s['y'],s['z'])) for s in tracked],
+                'velocity_endpoint_geo':[geo_dict((s['x']+s['vx'],s['y']+s['vy'],s['z']+s['vz'])) for s in tracked]}
+            (self._trace_dir/('frame-'+str(measurement.frame)+'.json')).write_text(json.dumps(evidence,allow_nan=False))
+        # Keep the legacy display positions local; CPM uses only the labelled snapshot.
+        inverse = np.array(measurement.transform.get_inverse_matrix())
+        display = []
+        for state in tracked:
+            state = dict(state)
+            local = inverse @ np.array([state['x'], state['y'], state['z'], 1.0])
+            state.update(x=float(local[0]), y=float(local[1]), z=float(local[2]))
+            state['distance'] = math.hypot(state['x'], state['y'])
+            display.append(state)
         with self._lock:
-            self._latest = tracked
+            self._latest = display
+            self._latest_snapshot = contract
 
     def _get_camera_class(self, xs, ys, zs, sem_img):
         """Projeter les points LiDAR sur l'image et lire le tag caméra."""
@@ -235,9 +293,9 @@ class FusionDetector:
         except Exception:
             return None
 
-    def _update_trackers(self, detections, max_dist=5.0, max_misses=3, min_hits=1):
+    def _update_trackers(self, detections, max_dist=5.0, max_misses=3, min_hits=1, dt=0.1):
         for t in self._trackers:
-            t.predict()
+            t.predict(dt)
 
         if not self._trackers:
             for d in detections:
@@ -277,6 +335,10 @@ class FusionDetector:
     def detect(self):
         with self._lock:
             return list(self._latest)
+
+    def perception_snapshot(self):
+        with self._lock:
+            return copy.deepcopy(self._latest_snapshot)
 
     def destroy(self):
         for s in self._sensors:
