@@ -6,13 +6,17 @@
 #include <vanetza/asn1/support/per_decoder.h>
 #include <map>
 #include <functional>
+#include <cstdint>
+
+namespace artery { namespace cpm_a3 { struct Context; }}
 
 namespace artery { namespace cpm_a2 {
 using Json=nlohmann::json;
 struct Unsupported : std::runtime_error { using std::runtime_error::runtime_error; };
 struct Conversion {
     vanetza::asn1::Cpm legacy;
-    long reference_time_ms=0;
+    std::int64_t reference_time_ms=0;
+    cpm_a3::Context* temporal_context=nullptr;
     Json notes=Json::array(), objects=Json::array();
     std::map<long,bool> velocity_available;
     Json control=Json::object();
@@ -48,7 +52,7 @@ inline long dimension_confidence(long value) {
     if(value==31 || value*10>100) return 101;
     return value*10; // R2 0.1m -> historical 0.01m
 }
-inline Conversion convert(const vanetza::asn1::r2::Cpm& input) {
+inline Conversion convert(const vanetza::asn1::r2::Cpm& input,bool envelope_only=false) {
     std::string error;
     if(!input.validate(error)) throw std::runtime_error("invalid R2: "+error);
     Conversion result;
@@ -59,8 +63,11 @@ inline Conversion convert(const vanetza::asn1::r2::Cpm& input) {
     output.header.protocolVersion=input->header.protocolVersion;
     output.header.messageID=input->header.messageId;
     output.header.stationID=input->header.stationId;
-    if(asn_INTEGER2long(&input->payload.managementContainer.referenceTime,&result.reference_time_ms))
+    long decoded_reference=0;
+    static_assert(sizeof(long)>=8,"ASN.1 image runtime requires a 64-bit long");
+    if(asn_INTEGER2long(&input->payload.managementContainer.referenceTime,&decoded_reference))
         throw Unsupported("referenceTime outside host integer range");
+    result.reference_time_ms=decoded_reference;
     output.cpm.generationDeltaTime=result.reference_time_ms%65536;
     note("referenceTime","full milliseconds kept in sidecar; legacy field is modulo 65536");
     auto& management=output.cpm.cpmParameters.managementContainer;
@@ -104,6 +111,10 @@ inline Conversion convert(const vanetza::asn1::r2::Cpm& input) {
         if(hadObjects) throw Unsupported("multiple object containers not supported");
         hadObjects=true;
         const auto& poc=wrap.containerData.choice.PerceivedObjectContainer;
+        if(envelope_only) {
+            note("perceivedObjects","A3 native R2 model; no historical IDs or deltas fabricated; legacy envelope contains no objects");
+            continue;
+        }
         if(poc.numberOfPerceivedObjects>255) throw Unsupported("total object count exceeds historical range");
         params.numberOfPerceivedObjects=poc.numberOfPerceivedObjects;
         params.perceivedObjectContainer=vanetza::asn1::allocate<PerceivedObjectContainer_t>();

@@ -11,6 +11,7 @@ import os
 import json
 from pathlib import Path
 from .perception_contract import snapshot
+from .estimation_quality import describe as describe_estimation_quality
 
 # Tags sémantiques CARLA
 VEHICLE_TAG    = 14
@@ -46,13 +47,26 @@ class KalmanTracker:
         self.cls_id = obj['class_id']
         self.score  = obj['score']
         self.source_object_id = obj.get('object_id')
+        self._quality_event = 'initialized'
+        self._quality_age_s = 0.
+        self._quality_measurement_age_s = 0.
+        self._quality_consecutive_updates = 1
+        self._quality_current_update = None
+        self._quality_last_update = None
 
     def predict(self, dt=0.1):
         self.F[0,3] = self.F[1,4] = self.F[2,5] = dt
         self.x = self.F @ self.x
         self.P = self.F @ self.P @ self.F.T + self.Q
+        self._quality_event = 'predicted'
+        self._quality_age_s += dt
+        self._quality_measurement_age_s += dt
+        self._quality_current_update = None
 
     def update(self, obj):
+        predicted_state = self.x.copy()
+        prior_measurement_age = self._quality_measurement_age_s
+        prior_misses = self.misses
         z = np.array([obj['x'], obj['y'], obj['z']], dtype=np.float32)
         y = z - self.H @ self.x
         S = self.H @ self.P @ self.H.T + self.R
@@ -62,6 +76,20 @@ class KalmanTracker:
         self.hits  += 1
         self.misses = 0
         self.source_object_id = obj.get('object_id')
+        correction = self.x - predicted_state
+        self._quality_consecutive_updates = (self._quality_consecutive_updates + 1
+            if prior_misses == 0 else 1)
+        self._quality_event = 'updated'
+        self._quality_measurement_age_s = 0.
+        self._quality_current_update = {
+            'measurement_interval_s': prior_measurement_age,
+            'innovation_world_m': y.tolist(),
+            'innovation_covariance_diagonal_model_m2': np.diag(S).tolist(),
+            'normalized_innovation_squared_model': float(y @ np.linalg.solve(S, y)),
+            'position_correction_world_m': correction[:3].tolist(),
+            'velocity_correction_world_m_s': correction[3:].tolist(),
+        }
+        self._quality_last_update = copy.deepcopy(self._quality_current_update)
 
     def get_state(self):
         return {
@@ -80,6 +108,7 @@ class KalmanTracker:
             'hits':      self.hits,
             'misses':    self.misses,
             'source_object_id': self.source_object_id,
+            'estimation_quality': describe_estimation_quality(self),
         }
 
 
@@ -328,6 +357,12 @@ class FusionDetector:
             for j, d in enumerate(detections):
                 if j not in matched_d:
                     self._trackers.append(KalmanTracker(d))
+        else:
+            # A complete empty frame is also a missed measurement. Previously
+            # this branch never incremented misses, so predicted tracks survived
+            # indefinitely despite max_misses. Keep the existing expiry policy.
+            for t in self._trackers:
+                t.misses += 1
 
         self._trackers = [t for t in self._trackers if t.misses <= max_misses]
         return [t.get_state() for t in self._trackers if t.hits >= min_hits]

@@ -39,6 +39,9 @@ def snapshot(states, frame_id, timestamp, reference_xyz, forward_xyz, to_geo):
         point = to_geo(xyz)
         position = enu(point, reference)
         obj = {k: state[k] for k in ('track_id', 'class', 'class_id', 'hits')}
+        if 'estimation_quality' in state:
+            # Optional producer-side diagnostics; never an ASN.1 confidence value.
+            obj['estimation_quality'] = copy.deepcopy(state['estimation_quality'])
         obj.update(zip(('x', 'y', 'z'), position))
         obj['vx'] = obj['vy'] = None
         if state['hits'] > 1:

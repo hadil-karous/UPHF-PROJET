@@ -26,6 +26,7 @@
 #include <vanetza/facilities/cam_functions.hpp>
 #include <chrono>
 #include "R2ToLegacy.h"
+#include "R2Temporal.h"
 #include <filesystem>
 #include <cstdlib>
 
@@ -228,12 +229,14 @@ void F2MD_CPService::indicate(const vanetza::btp::DataIndication& indication, st
     auto emit=[&](Json record) {
         record["event_id"]=event; record["receiver"]=receiver;
         record["simulation_time_s"]=simTime().dbl();
-        if(const char* directory=std::getenv("EXFMD_A2_DIR")) {
+        const char* directory=std::getenv("EXFMD_A3_DIR");
+        if(!directory) directory=std::getenv("EXFMD_A2_DIR");
+        if(directory) {
             std::filesystem::create_directories(directory);
             std::ofstream stream(std::filesystem::path(directory)/("receiver-"+std::to_string(receiver)+".jsonl"),std::ios::app);
             if(!(stream << record.dump() << std::endl)) throw std::runtime_error("cannot write A2 event");
         }
-        std::cout << "F2MD_A2 " << record.dump() << std::endl;
+        std::cout << (std::getenv("EXFMD_A3_TEMPORAL")?"F2MD_A3 ":"F2MD_A2 ") << record.dump() << std::endl;
     };
     emit({{"stage","receive"},{"status","ok"}});
     std::string stage="decode",sourceHex;
@@ -243,7 +246,10 @@ void F2MD_CPService::indicate(const vanetza::btp::DataIndication& indication, st
         auto r2=cpm_a2::decode(bytes); // always decode bytes; no typed-packet shortcut
         emit({{"stage","decode"},{"status","ok"},{"source_r2_hex",cpm_a2::hex(bytes)}});
         stage="convert";
-        auto converted=cpm_a2::convert(r2);
+        cpm_a3::Context temporal;
+        temporal.engine=&mTemporalHistory; temporal.receiver=receiver;
+        temporal.receive_ms=countTaiMilliseconds(mTimer->getCurrentTime());
+        auto converted=std::getenv("EXFMD_A3_TEMPORAL")?cpm_a3::prepare(r2,temporal):cpm_a2::convert(r2);
         emit({{"stage","convert"},{"status","ok"},{"station_id",converted.legacy->header.stationID},
             {"reference_time_ms",converted.reference_time_ms},{"legacy_delta_ms",converted.legacy->cpm.generationDeltaTime},
             {"objects",converted.objects},{"conversion_notes",converted.notes},
@@ -254,16 +260,17 @@ void F2MD_CPService::indicate(const vanetza::btp::DataIndication& indication, st
         const double result=mF2MDFacility.onCPM(converted.legacy,indication.source_position.gn_addr.mid(),mCpmCheckList,PseudoID2ArteryID);
         if(converted.control.empty()) throw std::runtime_error("R2 control policy was not executed");
         emit({{"stage","control"},{"status",converted.control["evaluated"].empty()?"non_evaluable":"partial"},
-            {"result",result},{"checks",converted.control}});
+            {"result",result},{"checks",converted.control},
+            {"facility_called",temporal.facility_called},{"temporal_checks_called",temporal.checks_called}});
         emit({{"stage","non_evaluable"},{"status","partial"},{"checks",converted.control["non_evaluable"]}});
         // Do not route a partial/unknown verdict into the historical Genuine log
         // or its alert writer. The structured A2 events are the authoritative result.
     } catch(const cpm_a2::Unsupported& error) {
         emit({{"stage",stage},{"status","non_evaluable"},{"reason",error.what()},{"source_r2_hex",sourceHex}});
     } catch(const std::exception& error) {
-        emit({{"stage",stage},{"status","error"},{"reason",error.what()},{"source_r2_hex",sourceHex}});
+        emit({{"stage",stage},{"status",std::getenv("EXFMD_A3_TEMPORAL")?"technical_error":"error"},{"reason",error.what()},{"source_r2_hex",sourceHex}});
     } catch(...) {
-        emit({{"stage",stage},{"status","error"},{"reason","unknown technical exception"}});
+        emit({{"stage",stage},{"status",std::getenv("EXFMD_A3_TEMPORAL")?"technical_error":"error"},{"reason","unknown technical exception"}});
     }
 }
 

@@ -11,6 +11,7 @@
 
 #include "CpmChecks.h"
 #include "R2ToLegacy.h"
+#include "TemporalPlausibility.h"
 
 template <typename T> int sgn(T val) {
     return (T(0) < val) - (val < T(0));
@@ -34,6 +35,34 @@ CpmChecks::CpmChecks(F2MD_CPParameters* params){
 double CpmChecks::CpmChecksum(const vanetza::asn1::Cpm& msg, NodeTableCpm *detectedNodes, CpmCheckList& mCpmCheckList,
                             std::shared_ptr<const traci::API>* TraciLiteAPI){
     if (artery::cpm_a2::active_conversion) {
+        auto& conversion=*artery::cpm_a2::active_conversion;
+        if(auto* context=conversion.temporal_context) {
+            if(!context->engine) throw std::runtime_error("A3 history engine missing");
+            context->checks_called=true;
+            auto& policy=context->policy;
+            policy.maximum_age_ms=std::llround(params->MAX_CPM_DELTATIME*1000.);
+            policy.maximum_interval_ms=policy.maximum_age_ms;
+            policy.expiration_ms=std::llround(params->MAX_CPM_HISTORY_TIME*1000.);
+            policy.acceleration_m_s2=params->MAX_PLAUSIBLE_ACCEL;
+            policy.deceleration_m_s2=params->MAX_PLAUSIBLE_DECEL;
+            policy.angular_rate_deg_s=params->MAX_PLAUSIBLE_ANGLE_CHANGE;
+            policy.excess_speed_m_s=params->TOLERANCE_EXCEED_SPEED;
+            conversion.control=context->engine->evaluate(context->message,context->receiver,context->receive_ms,policy,
+                [&](double x,double y) { return speedPlausibility(x,y); });
+            conversion.control["policy"]["speed_limit_m_s"]=params->MAX_PLAUSIBLE_SPEED;
+            double speedFailures=0,speedConsistencyFailures=0,positionFailures=0;
+            for(const auto& row:conversion.control["checks"]) if(row["status"]=="anomaly") {
+                speedFailures+=row["check"]=="speed_plausibility";
+                speedConsistencyFailures+=(row["check"]=="speed_consistency" || row["check"]=="direction_consistency");
+                positionFailures+=row["check"]=="position_speed_consistency";
+            }
+            mCpmCheckList.setspeedPlausibility(speedFailures);
+            mCpmCheckList.setspeedConsistency(speedConsistencyFailures);
+            mCpmCheckList.setpositionSpeedConsistency(positionFailures);
+            const double verdict=conversion.control["anomalies"].get<double>()>0?1.:0.;
+            mCpmCheckList.setreport(verdict>0);
+            return verdict;
+        }
         const double verdict=artery::cpm_a2::evaluate(*artery::cpm_a2::active_conversion,
             [&](double x,double y) { return speedPlausibility(x,y); });
         mCpmCheckList.setspeedPlausibility(artery::cpm_a2::active_conversion->control["anomalies"].get<double>());
