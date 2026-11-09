@@ -1,0 +1,26 @@
+{
+  "mode": "REPLAY · résultats sauvegardés",
+  "title": "ExFMD-CP · Démonstration A4",
+  "object_options": 2,
+  "selected_frame": 163,
+  "details": "track_id1Acteur CARLA4Station CPM88Récepteurs natifs161 / 233Référence TAI, ms448538400710X / Y / Z, m-0.988 / -2.570 / 0.946VX / VY, m/s-0.410 / -0.168Phasemeasurement_updatedQualificationuncalibrated_estimate",
+  "check_rows": 7,
+  "selected_checks": 14,
+  "metrics": {
+    "vehicles": 3,
+    "fusion_frames": 74,
+    "cpm_tx": 38,
+    "ros_cpm_copies": 38,
+    "radio_rx": 52,
+    "decoded": 52,
+    "controlled": 52,
+    "conversion_rejections": 0,
+    "technical_errors": 0,
+    "non_evaluable_checks": 132
+  },
+  "error": "",
+  "horizontal_overflow": false,
+  "playback_frame": 165,
+  "passed": true,
+  "runtime_errors": []
+}

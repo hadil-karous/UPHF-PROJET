@@ -1,0 +1,2 @@
+# Shell entrypoint executed directly by Bash inside the ROS container.
+scripts/cpm/live_ros.sh text eol=lf

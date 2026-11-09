@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "radio_received": 52,
+  "r2_decoded": 52,
+  "converted": 52,
+  "facility_calls": 52,
+  "temporal_calls": 52,
+  "exact_native_recalculations": 52,
+  "receivers": [
+    161,
+    233
+  ],
+  "technical_errors": 0,
+  "conversion_rejections": 0,
+  "policy": {
+    "acceleration_m_s2": 3.0,
+    "angular_rate_deg_s": 90.0,
+    "deceleration_m_s2": 4.5,
+    "excess_speed_m_s": 3.0,
+    "expiration_ms": 15000,
+    "maximum_age_ms": 5000,
+    "maximum_interval_ms": 5000,
+    "speed_limit_m_s": 4.1
+  },
+  "checks": [
+    {
+      "check": "direction_consistency",
+      "status": "anomaly",
+      "count": 8
+    },
+    {
+      "check": "direction_consistency",
+      "status": "non_evaluable",
+      "count": 8
+    },
+    {
+      "check": "direction_consistency",
+      "status": "passed",
+      "count": 88
+    },
+    {
+      "check": "distance_plausibility",
+      "status": "non_evaluable",
+      "count": 52
+    },
+    {
+      "check": "kalman_consistency",
+      "status": "non_evaluable",
+      "count": 52
+    },
+    {
+      "check": "position_speed_consistency",
+      "status": "anomaly",
+      "count": 4
+    },
+    {
+      "check": "position_speed_consistency",
+      "status": "non_evaluable",
+      "count": 8
+    },
+    {
+      "check": "position_speed_consistency",
+      "status": "passed",
+      "count": 92
+    },
+    {
+      "check": "speed_consistency",
+      "status": "anomaly",
+      "count": 2
+    },
+    {
+      "check": "speed_consistency",
+      "status": "non_evaluable",
+      "count": 8
+    },
+    {
+      "check": "speed_consistency",
+      "status": "passed",
+      "count": 94
+    },
+    {
+      "check": "speed_plausibility",
+      "status": "non_evaluable",
+      "count": 4
+    },
+    {
+      "check": "speed_plausibility",
+      "status": "passed",
+      "count": 100
+    },
+    {
+      "check": "temporal_order",
+      "status": "passed",
+      "count": 104
+    }
+  ],
+  "temporal_anomaly_occurrences": 14,
+  "a1": {
+    "passed": true,
+    "errors": [],
+    "captured_cpm": 38,
+    "emission_traces": 38,
+    "matched_payloads": 38,
+    "compared_object_rows": 76,
+    "unique_emitted_frames": 37,
+    "ros_perception_frames": 72,
+    "joined_frames": 72,
+    "fusion_frames": 74,
+    "registered_frames": 75,
+    "track_source_actor_ids": {
+      "0": [
+        2
+      ],
+      "1": [
+        4
+      ]
+    },
+    "predicted_track_states": 21,
+    "max_position_quantization_error_m": 0.00496635800747891,
+    "max_velocity_quantization_error_m_s": 0.0049339209239243065,
+    "max_frame_join_error_s": 0.0,
+    "measurement_age_ms": [
+      110,
+      210
+    ],
+    "max_enu_recomputation_error_m": 7.181490957464121e-10,
+    "max_enu_velocity_recomputation_error_m_s": 7.181490957464121e-10,
+    "example": {
+      "capture_index": 1,
+      "jsonl_line": 41,
+      "frame_id": 155,
+      "track_id": 0,
+      "station_id": 88,
+      "payload_sha256": "6bf14a2a3a4bd357bc07ec9cd9b793c3f974422c99fb0e011ad29154373ed01d",
+      "measurement_sumo_s": 0.2,
+      "measurement_carla_s": 68.81518250266527,
+      "emission_sumo_s": 0.310276337038,
+      "reference_tai_ms": 448538400310,
+      "measurement_delta_ms": -110,
+      "source_x_m": -3.359005037103094,
+      "decoded_x_m": -3.36,
+      "source_y_m": -10.065770979998533,
+      "decoded_y_m": -10.07,
+      "source_z_m": 1.0624359762487785,
+      "decoded_z_m": 1.06,
+      "source_vx_m_s": -0.5707274069804558,
+      "decoded_vx_m_s": -0.57,
+      "source_vy_m_s": -0.10644079888583491,
+      "decoded_vy_m_s": -0.11
+    },
+    "execution": {
+      "ros_exit_code": 0,
+      "artery_exit_code": 0,
+      "core": "/repo/results/phase1/a1-e2e-20261106-161848/build/libartery_core.so",
+      "f2md_loaded": true,
+      "nominal_steps": 75,
+      "nominal_sumo_time_s": 3.75
+    }
+  },
+  "source": "live CARLA/SUMO/ROS/Artery/F2MD; no packet replay transmitter",
+  "native_receptions_are_not_ros_copies": true
+}

@@ -1,0 +1,31 @@
+{
+  "pause_stable": true,
+  "slow_step_count": 2,
+  "fast_step_count": 12,
+  "camera_switch_passed": true,
+  "object_selection_passed": true,
+  "snapshot": {
+    "mode": "replay",
+    "frame": "212",
+    "perception_frame": 212,
+    "pixels": 960,
+    "camera_frames": 74,
+    "metrics": {
+      "vehicles": 3,
+      "fusion_frames": 74,
+      "cpm_tx": 38,
+      "ros_cpm_copies": 38,
+      "radio_rx": 52,
+      "decoded": 52,
+      "controlled": 52,
+      "conversion_rejections": 0,
+      "technical_errors": 0,
+      "non_evaluable_checks": 132
+    },
+    "errors": "",
+    "overflow": false
+  },
+  "camera_and_perception_same_frame": true,
+  "passed": true,
+  "runtime_errors": []
+}

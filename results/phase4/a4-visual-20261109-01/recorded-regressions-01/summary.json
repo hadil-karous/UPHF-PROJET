@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "a2_messages_identical": 76,
+  "a2_evaluated_speed_checks_identical": 150,
+  "a3_native_decisions_identical": 76,
+  "a3_temporal_anomaly_occurrences": 24,
+  "source_a3_index": "results\\phase3\\calibration-20261108-190113\\native-20261108-181019-177625\\offline-index.json",
+  "simulation_launched": false
+}

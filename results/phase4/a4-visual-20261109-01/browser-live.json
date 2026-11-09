@@ -1,0 +1,45 @@
+{
+  "live_camera_advances": true,
+  "before": {
+    "mode": "live",
+    "frame": "210",
+    "pixels": 960,
+    "camera_frames": 70,
+    "metrics": {
+      "vehicles": 3,
+      "fusion_frames": 73,
+      "cpm_tx": 36,
+      "ros_cpm_copies": 36,
+      "radio_rx": 48,
+      "decoded": 48,
+      "controlled": 48,
+      "conversion_rejections": 0,
+      "technical_errors": 0,
+      "non_evaluable_checks": 124
+    },
+    "errors": "",
+    "overflow": false
+  },
+  "after": {
+    "mode": "live",
+    "frame": "214",
+    "pixels": 960,
+    "camera_frames": 74,
+    "metrics": {
+      "vehicles": 3,
+      "fusion_frames": 74,
+      "cpm_tx": 36,
+      "ros_cpm_copies": 36,
+      "radio_rx": 48,
+      "decoded": 48,
+      "controlled": 48,
+      "conversion_rejections": 0,
+      "technical_errors": 0,
+      "non_evaluable_checks": 124
+    },
+    "errors": "",
+    "overflow": false
+  },
+  "passed": true,
+  "runtime_errors": []
+}
